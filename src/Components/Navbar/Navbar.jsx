@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiX } from "react-icons/bi";
 import { FaChevronDown } from "react-icons/fa"; // Dropdown icon
 import sorobLogo from "../../assets/sorob.logo.png";
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false); // For mobile menu
-    const [dropdownOpen, setDropdownOpen] = useState(false); // For dropdown menu
+    const [open, setOpen] = useState(false); // Mobile menu state
+    const [dropdownOpen, setDropdownOpen] = useState(false); // "Working Area" dropdown state
+    const [dropdownKeyOpen, setDropdownKeyOpen] = useState(false); // "Key Area" dropdown state
+
+    const dropdownRef = useRef(null); // Ref for "Working Area"
+    const dropdownKeyRef = useRef(null); // Ref for "Key Area"
 
     const menuItems = [
         "Home",
@@ -19,18 +23,43 @@ const Navbar = () => {
         "Contact"
     ];
 
-    const dropdownItems = [
+    const keyAreaItems = [
+        "Education",
+        "Health",
+        "Economic Development",
+        "Environmental Protection",
+        "Social Welfare"
+    ]; // Sub-menu for "Key Area"
+
+    const workingAreaItems = [
         "Research",
         "Visual Documentation",
         "Fact Finding",
         "Community Support",
-        "Media campaign",
+        "Media Campaign",
         "Seminar",
         "Workshop",
         "Reports",
         "Story",
         "Case Study"
     ]; // Sub-menu for "Working Area"
+
+    // Function to close dropdowns when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                dropdownRef.current && !dropdownRef.current.contains(event.target) &&
+                dropdownKeyRef.current && !dropdownKeyRef.current.contains(event.target)
+            ) {
+                setDropdownOpen(false);
+                setDropdownKeyOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="w-full h-full absolute">
@@ -41,10 +70,30 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop Menu */}
-                <ul className="hidden xl:flex items-center gap-2 font-semibold ">
+                <ul className="hidden xl:flex items-center gap-2 font-semibold text-lg">
                     {menuItems.map((item) => (
-                        item === "Working Area" ? (
-                            <li key={item} className="relative group">
+                        item === "Key Area" ? (
+                            // Key Area Dropdown (Desktop)
+                            <li key={item} className="relative group" ref={dropdownKeyRef}>
+                                <button
+                                    className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                    onClick={() => setDropdownKeyOpen(!dropdownKeyOpen)}
+                                >
+                                    {item} <FaChevronDown className={`transition-transform ${dropdownKeyOpen ? "rotate-180" : ""}`} />
+                                </button>
+
+                                {/* Dropdown for Desktop */}
+                                <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownKeyOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                    {keyAreaItems.map((subItem) => (
+                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                            {subItem}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ) : item === "Working Area" ? (
+                            // Working Area Dropdown (Desktop)
+                            <li key={item} className="relative group" ref={dropdownRef}>
                                 <button
                                     className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
                                     onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -54,11 +103,8 @@ const Navbar = () => {
 
                                 {/* Dropdown for Desktop */}
                                 <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                                    {dropdownItems.map((subItem) => (
-                                        <li
-                                            key={subItem}
-                                            className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer"
-                                        >
+                                    {workingAreaItems.map((subItem) => (
+                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
                                             {subItem}
                                         </li>
                                     ))}
@@ -74,7 +120,7 @@ const Navbar = () => {
 
                 {/* Donate Button (Desktop) */}
                 <div className="hidden md:flex items-center gap-3">
-                    <button className="btn text-white  bg-red-600">Donate Now</button>
+                    <button className="btn text-white bg-red-600">Donate Now</button>
                 </div>
 
                 {/* Mobile Menu Toggle Button */}
@@ -86,8 +132,28 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
                 {menuItems.map((item) => (
-                    item === "Working Area" ? (
-                        <div key={item} className="w-full">
+                    item === "Key Area" ? (
+                        // Key Area Dropdown (Mobile)
+                        <div key={item} className="w-full" ref={dropdownKeyRef}>
+                            <button
+                                className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                                onClick={() => setDropdownKeyOpen(!dropdownKeyOpen)}
+                            >
+                                {item} <FaChevronDown className={`transition-transform ${dropdownKeyOpen ? "rotate-180" : ""}`} />
+                            </button>
+
+                            {/* Dropdown for Mobile */}
+                            <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownKeyOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                                {keyAreaItems.map((subItem) => (
+                                    <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-400 hover:text-white cursor-pointer">
+                                        {subItem}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : item === "Working Area" ? (
+                        // Working Area Dropdown (Mobile)
+                        <div key={item} className="w-full" ref={dropdownRef}>
                             <button
                                 className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
                                 onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -97,11 +163,8 @@ const Navbar = () => {
 
                             {/* Dropdown for Mobile */}
                             <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                {dropdownItems.map((subItem) => (
-                                    <li
-                                        key={subItem}
-                                        className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-400 hover:text-white cursor-pointer"
-                                    >
+                                {workingAreaItems.map((subItem) => (
+                                    <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-400 hover:text-white cursor-pointer">
                                         {subItem}
                                     </li>
                                 ))}
