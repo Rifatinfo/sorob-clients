@@ -62,7 +62,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="w-full h-full absolute">
+        <div className="w-full h-full absolute z-10">
             <header className="flex justify-between items-center px-5 py-3 bg-white text-black">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-3">
