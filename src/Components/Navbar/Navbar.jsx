@@ -1,0 +1,121 @@
+import { useState } from "react";
+import { RiMenuUnfold2Fill } from "react-icons/ri";
+import { BiX } from "react-icons/bi";
+import { FaChevronDown } from "react-icons/fa"; // Dropdown icon
+import sorobLogo from "../../assets/sorob.logo.png";
+
+const Navbar = () => {
+    const [open, setOpen] = useState(false); // For mobile menu
+    const [dropdownOpen, setDropdownOpen] = useState(false); // For dropdown menu
+
+    const menuItems = [
+        "Home",
+        "About Us",
+        "Key Area",
+        "Working Area",
+        "News",
+        "Event",
+        "Archive",
+        "Contact"
+    ];
+
+    const dropdownItems = [
+        "Research",
+        "Visual Documentation",
+        "Fact Finding",
+        "Community Support",
+        "Media campaign",
+        "Seminar",
+        "Workshop",
+        "Reports",
+        "Story",
+        "Case Study"
+    ]; // Sub-menu for "Working Area"
+
+    return (
+        <div className="w-full h-full absolute">
+            <header className="flex justify-between items-center px-5 py-3 bg-white text-black">
+                {/* Logo */}
+                <a href="/" className="flex items-center gap-3">
+                    <img className="h-[40px] w-auto" src={sorobLogo} alt="Sorob Logo" />
+                </a>
+
+                {/* Desktop Menu */}
+                <ul className="hidden xl:flex items-center gap-2 font-semibold ">
+                    {menuItems.map((item) => (
+                        item === "Working Area" ? (
+                            <li key={item} className="relative group">
+                                <button
+                                    className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                                >
+                                    {item} <FaChevronDown className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+                                </button>
+
+                                {/* Dropdown for Desktop */}
+                                <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                    {dropdownItems.map((subItem) => (
+                                        <li
+                                            key={subItem}
+                                            className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer"
+                                        >
+                                            {subItem}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ) : (
+                            <li key={item} className="text-lg p-3 rounded-md transition-all cursor-pointer">
+                                {item}
+                            </li>
+                        )
+                    ))}
+                </ul>
+
+                {/* Donate Button (Desktop) */}
+                <div className="hidden md:flex items-center gap-3">
+                    <button className="btn text-white  bg-red-600">Donate Now</button>
+                </div>
+
+                {/* Mobile Menu Toggle Button */}
+                <span className="lg:hidden block text-2xl cursor-pointer mr-3" onClick={() => setOpen(!open)}>
+                    {open ? <BiX /> : <RiMenuUnfold2Fill />}
+                </span>
+            </header>
+
+            {/* Mobile Menu */}
+            <div className={`lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
+                {menuItems.map((item) => (
+                    item === "Working Area" ? (
+                        <div key={item} className="w-full">
+                            <button
+                                className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                                onClick={() => setDropdownOpen(!dropdownOpen)}
+                            >
+                                {item} <FaChevronDown className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+                            </button>
+
+                            {/* Dropdown for Mobile */}
+                            <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                                {dropdownItems.map((subItem) => (
+                                    <li
+                                        key={subItem}
+                                        className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-400 hover:text-white cursor-pointer"
+                                    >
+                                        {subItem}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : (
+                        <li key={item} className="text-lg list-none w-full text-start px-4 py-3 border-b transition-all cursor-pointer">
+                            {item}
+                        </li>
+                    )
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Navbar;
