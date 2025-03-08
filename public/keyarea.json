@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "icon": "https://example.com/icons/javascript.png",
+      "title": "Enforced Disapperences",
+      "short_description": "A beginner-friendly guide to mastering JavaScript."
+    },
+    {
+      "id": 2,
+      "icon": "https://example.com/icons/design.png",
+      "title": "Extrajudicial Killing",
+      "short_description": "Fundamentals of design principles and color theory."
+    },
+    {
+      "id": 3,
+      "icon": "https://example.com/icons/webdev.png",
+      "title": "Torture and Mob",
+      "short_description": "Build modern websites using HTML, CSS, and JavaScript."
+    },
+    {
+      "id": 4,
+      "icon": "https://example.com/icons/mobile.png",
+      "title": "Institutional Violance",
+      "short_description": "Create stunning mobile apps for iOS and Android."
+    },
+    {
+      "id": 5,
+      "icon": "https://example.com/icons/seo.png",
+      "title": "Human Rights Defenders",
+      "short_description": "Improve website rankings with SEO best practices."
+    },
+    {
+      "id": 6,
+      "icon": "https://example.com/icons/security.png",
+      "title": "",
+      "short_description": "Learn how to protect systems from cyber threats."
+    }
+  ]
