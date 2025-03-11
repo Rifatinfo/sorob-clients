@@ -5,16 +5,21 @@ import { FaChevronDown } from "react-icons/fa"; // Dropdown icon
 import sorobLogo from "../../assets/sorob.logo.png";
 import { FiSearch } from "react-icons/fi";
 
-
 const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
     const [dropdownOpen, setDropdownOpen] = useState(false); // "Working Area" dropdown state
     const [dropdownKeyOpen, setDropdownKeyOpen] = useState(false); // "Key Area" dropdown state
     const [dropdownAboutOpen, setDropdownAboutOpen] = useState(false); // "About Us" dropdown state
+    const [dropdownProjectsOpen, setDropdownProjectsOpen] = useState(false); // "Projects" dropdown state
+    const [dropdownArchiveOpen, setDropdownArchiveOpen] = useState(false); // "Archive" dropdown state
+    const [dropdownEventOpen, setDropdownEventOpen] = useState(false); // "Event" dropdown state
 
     const dropdownRef = useRef(null); // Ref for "Working Area"
     const dropdownKeyRef = useRef(null); // Ref for "Key Area"
     const dropdownAboutRef = useRef(null); // Ref for "About Us"
+    const dropdownProjectsRef = useRef(null); // Ref for "Projects"
+    const dropdownArchiveRef = useRef(null); // Ref for "Archive"
+    const dropdownEventRef = useRef(null); // Ref for "Event"
 
     const menuItems = [
         "Home",
@@ -30,32 +35,46 @@ const Navbar = () => {
 
     const aboutUsItems = [
         "About Sorob",
-        "Out Goal",
+        "Our Goal",
         "Organogram",
         "Membership"
-    ]; // Sub-menu for "About Us"
+    ];
 
     const keyAreaItems = [
-        "Enforced Disapperence",
+        "Enforced Disappearing",
         "Extrajudicial Killing",
         "Torture & Mob",
-        "Instititional Violence",
-        "Human rights defenders",
-        "Environmental rights"
-    ]; // Sub-menu for "Key Area"
+        "Institutional Violence",
+        "Human Rights Defenders",
+        "Environmental Rights"
+    ];
 
     const workingAreaItems = [
         "Research",
         "Visual Documentation",
         "Fact Finding",
         "Community Support",
-        "Media Campaign",
-        "Seminar",
-        "Workshop",
+        "Media Campaign"
+    ];
+
+    const projectsItems = [
+        "Project 1",
+        "Project 2",
+        "Project 3"
+    ];
+
+    const archiveItems = [
         "Reports",
         "Story",
-        "Case Study"
-    ]; // Sub-menu for "Working Area"
+        "Case Studies",
+        "Photos",
+        "Video"
+    ];
+
+    const eventItems = [
+        "Seminar",
+        "Workshop"
+    ];
 
     // Function to close dropdowns when clicking outside
     useEffect(() => {
@@ -63,11 +82,17 @@ const Navbar = () => {
             if (
                 dropdownRef.current && !dropdownRef.current.contains(event.target) &&
                 dropdownKeyRef.current && !dropdownKeyRef.current.contains(event.target) &&
-                dropdownAboutRef.current && !dropdownAboutRef.current.contains(event.target)
+                dropdownAboutRef.current && !dropdownAboutRef.current.contains(event.target) &&
+                dropdownProjectsRef.current && !dropdownProjectsRef.current.contains(event.target) &&
+                dropdownArchiveRef.current && !dropdownArchiveRef.current.contains(event.target) &&
+                dropdownEventRef.current && !dropdownEventRef.current.contains(event.target)
             ) {
                 setDropdownOpen(false);
                 setDropdownKeyOpen(false);
                 setDropdownAboutOpen(false);
+                setDropdownProjectsOpen(false);
+                setDropdownArchiveOpen(false);
+                setDropdownEventOpen(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
@@ -89,7 +114,6 @@ const Navbar = () => {
                     <ul className="hidden xl:flex items-center gap-2 font-semibold text-lg">
                         {menuItems.map((item) => (
                             item === "Key Area" ? (
-                                // Key Area Dropdown (Desktop)
                                 <li key={item} className="relative group" ref={dropdownKeyRef}>
                                     <button
                                         className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
@@ -98,7 +122,6 @@ const Navbar = () => {
                                         {item} <FaChevronDown className={`transition-transform ${dropdownKeyOpen ? "rotate-180" : ""}`} />
                                     </button>
 
-                                    {/* Dropdown for Desktop */}
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownKeyOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {keyAreaItems.map((subItem) => (
                                             <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
@@ -108,7 +131,6 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                             ) : item === "Working Area" ? (
-                                // Working Area Dropdown (Desktop)
                                 <li key={item} className="relative group" ref={dropdownRef}>
                                     <button
                                         className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
@@ -117,7 +139,6 @@ const Navbar = () => {
                                         {item} <FaChevronDown className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
                                     </button>
 
-                                    {/* Dropdown for Desktop */}
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {workingAreaItems.map((subItem) => (
                                             <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
@@ -127,7 +148,6 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                             ) : item === "About Us" ? (
-                                // About Us Dropdown (Desktop)
                                 <li key={item} className="relative group" ref={dropdownAboutRef}>
                                     <button
                                         className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
@@ -136,10 +156,60 @@ const Navbar = () => {
                                         {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
                                     </button>
 
-                                    {/* Dropdown for Desktop */}
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {aboutUsItems.map((subItem) => (
-                                            <li key={subItem} className="text-lg px-6 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                                {subItem}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ) : item === "Projects" ? (
+                                <li key={item} className="relative group" ref={dropdownProjectsRef}>
+                                    <button
+                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                        onClick={() => setDropdownProjectsOpen(!dropdownProjectsOpen)}
+                                    >
+                                        {item} <FaChevronDown className={`transition-transform ${dropdownProjectsOpen ? "rotate-180" : ""}`} />
+                                    </button>
+
+                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownProjectsOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                        {projectsItems.map((subItem) => (
+                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                                {subItem}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ) : item === "Archive" ? (
+                                <li key={item} className="relative group" ref={dropdownArchiveRef}>
+                                    <button
+                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                        onClick={() => setDropdownArchiveOpen(!dropdownArchiveOpen)}
+                                    >
+                                        {item} <FaChevronDown className={`transition-transform ${dropdownArchiveOpen ? "rotate-180" : ""}`} />
+                                    </button>
+
+                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownArchiveOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                        {archiveItems.map((subItem) => (
+                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                                {subItem}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ) : item === "Event" ? (
+                                <li key={item} className="relative group" ref={dropdownEventRef}>
+                                    <button
+                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                        onClick={() => setDropdownEventOpen(!dropdownEventOpen)}
+                                    >
+                                        {item} <FaChevronDown className={`transition-transform ${dropdownEventOpen ? "rotate-180" : ""}`} />
+                                    </button>
+
+                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownEventOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                        {eventItems.map((subItem) => (
+                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
                                                 {subItem}
                                             </li>
                                         ))}
@@ -155,7 +225,6 @@ const Navbar = () => {
 
                     {/* Donate Button (Desktop) */}
                     <div className="hidden md:flex items-center gap-3">
-                        {/* <button className="btn text-white bg-red-600"></button> */}
                         <p className="text-black font-semibold text-3xl"><FiSearch/></p>
                     </div>
 
@@ -167,71 +236,129 @@ const Navbar = () => {
 
                 {/* Mobile Menu */}
                 <div className={`text-red-600 text-lg lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
-                    {menuItems.map((item) => (
-                        item === "Key Area" ? (
-                            // Key Area Dropdown (Mobile)
-                            <div key={item} className="w-full" ref={dropdownKeyRef}>
-                                <button
-                                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
-                                    onClick={() => setDropdownKeyOpen(!dropdownKeyOpen)}
-                                >
-                                    {item} <FaChevronDown className={`transition-transform ${dropdownKeyOpen ? "rotate-180" : ""}`} />
-                                </button>
+    {menuItems.map((item) => (
+        item === "Key Area" ? (
+            // Key Area Dropdown (Mobile)
+            <div key={item} className="w-full" ref={dropdownKeyRef}>
+                <button
+                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                    onClick={() => setDropdownKeyOpen(!dropdownKeyOpen)}
+                >
+                    {item} <FaChevronDown className={`transition-transform ${dropdownKeyOpen ? "rotate-180" : ""}`} />
+                </button>
 
-                                {/* Dropdown for Mobile */}
-                                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownKeyOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    {keyAreaItems.map((subItem) => (
-                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
-                                            {subItem}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ) : item === "Working Area" ? (
-                            // Working Area Dropdown (Mobile)
-                            <div key={item} className="w-full" ref={dropdownRef}>
-                                <button
-                                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
-                                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                                >
-                                    {item} <FaChevronDown className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
-                                </button>
-
-                                {/* Dropdown for Mobile */}
-                                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    {workingAreaItems.map((subItem) => (
-                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
-                                            {subItem}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ) : item === "About Us" ? (
-                            // About Us Dropdown (Mobile)
-                            <div key={item} className="w-full" ref={dropdownAboutRef}>
-                                <button
-                                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
-                                    onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
-                                >
-                                    {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
-                                </button>
-
-                                {/* Dropdown for Mobile */}
-                                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownAboutOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    {aboutUsItems.map((subItem) => (
-                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
-                                            {subItem}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ) : (
-                            <li key={item} className="text-lg list-none w-full text-start px-4 py-3 border-b transition-all cursor-pointer">
-                                {item}
-                            </li>
-                        )
+                {/* Dropdown for Mobile */}
+                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownKeyOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                    {keyAreaItems.map((subItem) => (
+                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                            {subItem}
+                        </li>
                     ))}
-                </div>
+                </ul>
+            </div>
+        ) : item === "Working Area" ? (
+            // Working Area Dropdown (Mobile)
+            <div key={item} className="w-full" ref={dropdownRef}>
+                <button
+                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                    {item} <FaChevronDown className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Dropdown for Mobile */}
+                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                    {workingAreaItems.map((subItem) => (
+                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                            {subItem}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ) : item === "About Us" ? (
+            // About Us Dropdown (Mobile)
+            <div key={item} className="w-full" ref={dropdownAboutRef}>
+                <button
+                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                    onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
+                >
+                    {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Dropdown for Mobile */}
+                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownAboutOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                    {aboutUsItems.map((subItem) => (
+                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                            {subItem}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ) : item === "Projects" ? (
+            // Projects Dropdown (Mobile)
+            <div key={item} className="w-full" ref={dropdownProjectsRef}>
+                <button
+                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                    onClick={() => setDropdownProjectsOpen(!dropdownProjectsOpen)}
+                >
+                    {item} <FaChevronDown className={`transition-transform ${dropdownProjectsOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Dropdown for Mobile */}
+                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownProjectsOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                    {projectsItems.map((subItem) => (
+                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                            {subItem}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ) : item === "Archive" ? (
+            // Archive Dropdown (Mobile)
+            <div key={item} className="w-full" ref={dropdownArchiveRef}>
+                <button
+                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                    onClick={() => setDropdownArchiveOpen(!dropdownArchiveOpen)}
+                >
+                    {item} <FaChevronDown className={`transition-transform ${dropdownArchiveOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Dropdown for Mobile */}
+                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownArchiveOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                    {archiveItems.map((subItem) => (
+                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                            {subItem}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ) : item === "Event" ? (
+            // Event Dropdown (Mobile)
+            <div key={item} className="w-full" ref={dropdownEventRef}>
+                <button
+                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                    onClick={() => setDropdownEventOpen(!dropdownEventOpen)}
+                >
+                    {item} <FaChevronDown className={`transition-transform ${dropdownEventOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Dropdown for Mobile */}
+                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownEventOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                    {eventItems.map((subItem) => (
+                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                            {subItem}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ) : (
+            <li key={item} className="text-lg list-none w-full text-start px-4 py-3 border-b transition-all cursor-pointer">
+                {item}
+            </li>
+        )
+    ))}
+</div>
+
             </div>
         </div>
     );
