@@ -10,9 +10,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
     const [dropdownOpen, setDropdownOpen] = useState(false); // "Working Area" dropdown state
     const [dropdownKeyOpen, setDropdownKeyOpen] = useState(false); // "Key Area" dropdown state
+    const [dropdownAboutOpen, setDropdownAboutOpen] = useState(false); // "About Us" dropdown state
 
     const dropdownRef = useRef(null); // Ref for "Working Area"
     const dropdownKeyRef = useRef(null); // Ref for "Key Area"
+    const dropdownAboutRef = useRef(null); // Ref for "About Us"
 
     const menuItems = [
         "Home",
@@ -26,12 +28,20 @@ const Navbar = () => {
         "Contact"
     ];
 
+    const aboutUsItems = [
+        "About Sorob",
+        "Out Goal",
+        "Organogram",
+        "Membership"
+    ]; // Sub-menu for "About Us"
+
     const keyAreaItems = [
-        "Education",
-        "Health",
-        "Economic Development",
-        "Environmental Protection",
-        "Social Welfare"
+        "Enforced Disapperence",
+        "Extrajudicial Killing",
+        "Torture & Mob",
+        "Instititional Violence",
+        "Human rights defenders",
+        "Environmental rights"
     ]; // Sub-menu for "Key Area"
 
     const workingAreaItems = [
@@ -52,10 +62,12 @@ const Navbar = () => {
         function handleClickOutside(event) {
             if (
                 dropdownRef.current && !dropdownRef.current.contains(event.target) &&
-                dropdownKeyRef.current && !dropdownKeyRef.current.contains(event.target)
+                dropdownKeyRef.current && !dropdownKeyRef.current.contains(event.target) &&
+                dropdownAboutRef.current && !dropdownAboutRef.current.contains(event.target)
             ) {
                 setDropdownOpen(false);
                 setDropdownKeyOpen(false);
+                setDropdownAboutOpen(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
@@ -114,6 +126,25 @@ const Navbar = () => {
                                         ))}
                                     </ul>
                                 </li>
+                            ) : item === "About Us" ? (
+                                // About Us Dropdown (Desktop)
+                                <li key={item} className="relative group" ref={dropdownAboutRef}>
+                                    <button
+                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                        onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
+                                    >
+                                        {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
+                                    </button>
+
+                                    {/* Dropdown for Desktop */}
+                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                        {aboutUsItems.map((subItem) => (
+                                            <li key={subItem} className="text-lg px-6 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                                {subItem}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
                             ) : (
                                 <li key={item} className="text-lg p-3 rounded-md transition-all cursor-pointer">
                                     {item}
@@ -135,7 +166,7 @@ const Navbar = () => {
                 </header>
 
                 {/* Mobile Menu */}
-                <div className={`text-red-600  text-lg lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
+                <div className={`text-red-600 text-lg lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
                     {menuItems.map((item) => (
                         item === "Key Area" ? (
                             // Key Area Dropdown (Mobile)
@@ -169,6 +200,25 @@ const Navbar = () => {
                                 {/* Dropdown for Mobile */}
                                 <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
                                     {workingAreaItems.map((subItem) => (
+                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                                            {subItem}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ) : item === "About Us" ? (
+                            // About Us Dropdown (Mobile)
+                            <div key={item} className="w-full" ref={dropdownAboutRef}>
+                                <button
+                                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
+                                    onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
+                                >
+                                    {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
+                                </button>
+
+                                {/* Dropdown for Mobile */}
+                                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownAboutOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                                    {aboutUsItems.map((subItem) => (
                                         <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
                                             {subItem}
                                         </li>
