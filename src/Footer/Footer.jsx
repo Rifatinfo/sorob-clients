@@ -1,10 +1,11 @@
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import logo from '../assets/sorob.logo.png'
+// import logo from '../assets/sorob.logo.png'
+import FooterLogo from '../assets/footer_logo.png'
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white py-10">
+        <footer className="bg-gray-900 text-white py-2">
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Footer Grid */}
@@ -13,7 +14,7 @@ const Footer = () => {
                     {/* Logo Section */}
                     <div className="flex flex-col items-center md:items-start space-y-3">
                         <div className="md:mr-20">
-                            <img  src={logo} alt="Sorob" className="mx-auto md:mx-0 rounded-full" />
+                            <img  src={FooterLogo} className="w-auto h-20 mx-auto md:mx-0 rounded-full" />
                         </div>
                     </div>
 

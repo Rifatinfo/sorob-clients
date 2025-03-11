@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 const KeyArea = () => {
     const [data, setData] = useState([]);
-    const [activeTab, setActiveTab] = useState("Architecto");
+    const [activeTab, setActiveTab] = useState("Human Rights");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,25 +30,25 @@ const KeyArea = () => {
             <div className="flex items-center justify-center md:text-center mb-10 text-lg">
                 <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap">
                     <button
-                        onClick={() => setActiveTab("Architecto")}
+                        onClick={() => setActiveTab("Human Rights")}
                         className={`font-semibold flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b-2 transition-all duration-300
-                        ${activeTab === "Architecto" ? "border-red-600 text-red-600" : "border-transparent text-gray-600"}`}
+                        ${activeTab === "Human Rights" ? "border-red-600 text-red-600" : "border-transparent text-gray-600"}`}
                     >
-                        <span>Architecto</span>
+                        <span>Human Rights</span>
                     </button>
                     <button
-                        onClick={() => setActiveTab("Corrupti")}
+                        onClick={() => setActiveTab("Environment")}
                         className={`font-semibold flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b-2 transition-all duration-300
-                        ${activeTab === "Corrupti" ? "border-red-600 text-red-600" : "border-transparent text-gray-600"}`}
+                        ${activeTab === "Environment" ? "border-red-600 text-red-600" : "border-transparent text-gray-600"}`}
                     >
-                        <span>Corrupti</span>
+                        <span>Environment</span>
                     </button>
                 </div>
 
                 {/* Tab Content */}
                 <div className="mt-6">
-                    {activeTab === "Architecto" && <p className="text-lg"></p>}
-                    {activeTab === "Corrupti" && <p className="text-lg"></p>}
+                    {activeTab === "Human Rights" && <p className="text-lg"></p>}
+                    {activeTab === "Environment" && <p className="text-lg"></p>}
                 </div>
             </div>
 

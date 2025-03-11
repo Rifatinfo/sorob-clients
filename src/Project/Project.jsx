@@ -61,17 +61,12 @@ const Project = () => {
     return (
         <div>
             <div>
-                <section className="bg-red-600 text-white py-12">
-                    <div className="text-center md:p-12 p-6">
+                <section className="bg-red-600 text-white py-4">
+                    <div className="text-center md:p-8 p-6">
                         <div>
                             <p className="text-4xl font-bold text-white">Projects</p>
-                            <p className="mt-2 text-lg text-gray-200">Explore our latest works and innovations</p>
                         </div>
-                        <div className="mt-8">
-                            <button className="mt-4 md:mt-0 bg-white text-red-600 px-6 py-3 rounded-lg hover:bg-gray-200 transition-all shadow-xl font-semibold">
-                                View All Projects
-                            </button>
-                        </div>
+
                     </div>
 
                     <div className="container mx-auto px-4">
@@ -85,6 +80,11 @@ const Project = () => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                    <div className="mt-8 text-center">
+                        <button className="mt-4 md:mt-0 bg-white text-red-600 px-6 py-3 rounded-lg hover:bg-gray-200 transition-all shadow-xl font-semibold">
+                            View All Projects
+                        </button>
                     </div>
                     <div>
 
