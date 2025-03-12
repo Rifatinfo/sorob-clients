@@ -1,38 +1,39 @@
 [
-    {
-      "id": 1,
-      "icon": "https://example.com/icons/javascript.png",
-      "title": "Enforced Disapperences",
-      "short_description": "A beginner-friendly guide to mastering JavaScript."
-    },
-    {
-      "id": 2,
-      "icon": "https://example.com/icons/design.png",
-      "title": "Extrajudicial Killing",
-      "short_description": "Fundamentals of design principles and color theory."
-    },
-    {
-      "id": 3,
-      "icon": "https://example.com/icons/webdev.png",
-      "title": "Torture and Mob",
-      "short_description": "Build modern websites using HTML, CSS, and JavaScript."
-    },
-    {
-      "id": 4,
-      "icon": "https://example.com/icons/mobile.png",
-      "title": "Institutional Violance",
-      "short_description": "Create stunning mobile apps for iOS and Android."
-    },
-    {
-      "id": 5,
-      "icon": "https://example.com/icons/seo.png",
-      "title": "Human Rights Defenders",
-      "short_description": "Improve website rankings with SEO best practices."
-    },
-    {
-      "id": 6,
-      "icon": "https://example.com/icons/security.png",
-      "title": "Human Rights",
-      "short_description": "Learn how to protect systems from cyber threats."
-    }
-  ]
+  {
+    "id": 1,
+    "icon": "https://cdn-icons-png.flaticon.com/512/16824/16824566.png",
+    "title": "Enforced Disappearances",
+    "short_description": "A guide to understanding enforced disappearances and their impact on human rights."
+  },
+  {
+    "id": 2,
+    "icon": "https://cdn-icons-png.flaticon.com/512/11434/11434446.png",
+    "title": "Extrajudicial Killing",
+    "short_description": "An overview of extrajudicial killings, their causes, and consequences on justice systems."
+  },
+  {
+    "id": 3,
+    "icon": "https://cdn-icons-png.flaticon.com/512/11431/11431698.png",
+    "title": "Torture and Mob",
+    "short_description": "Exploring the issues of torture and mob violence in various justice systems worldwide."
+  },
+  {
+    "id": 4,
+    "icon": "https://cdn-icons-png.flaticon.com/512/3058/3058942.png",
+    "title": "Institutional Violence",
+    "short_description": "A study of institutional violence and its implications on societal safety and human rights."
+  },
+  {
+    "id": 5,
+    "icon1": "https://cdn-icons-png.flaticon.com/512/9922/9922509.png",
+    "icon": "https://cdn-icons-png.flaticon.com/512/11432/11432377.png",
+    "title": "Human Rights Defenders",
+    "short_description": "A guide to understanding the role and challenges of human rights defenders."
+  },
+  {
+    "id": 6,
+    "icon": "https://cdn-icons-png.flaticon.com/512/10484/10484391.png",
+    "title": "Human Rights",
+    "short_description": "An essential overview of human rights, their protections, and how they are safeguarded."
+  }
+]

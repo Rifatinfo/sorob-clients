@@ -22,7 +22,8 @@ const KeyArea = () => {
     }, []);
 
     return (
-        <div className="max-w-6xl mx-auto">
+       <div className="bg-gray-100 md:py-30 py-10">
+         <div className="max-w-6xl mx-auto w-full">
             <div className="text-center">
                 <p className="text-4xl font-semibold">Key Area</p>
                 <p className="mt-6 mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas dignissimos architecto perferendis <br /> cupiditate, ratione quas quasi nemo necessitatibus quo minus!</p>
@@ -53,7 +54,7 @@ const KeyArea = () => {
             </div>
 
             <div >
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-6 md:p-0 p-4">
                     {data.map(item => (
                         <div
                             key={item.id}
@@ -79,6 +80,7 @@ const KeyArea = () => {
             </div>
 
         </div>
+       </div>
     );
 };
 
