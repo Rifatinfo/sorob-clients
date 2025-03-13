@@ -8,7 +8,7 @@ import Slider_6 from './slider_6';
 const ProjectSlider = () => {
     return (
         <div>
-            <div className="carousel w-full mt-20 relative">
+            <div className="carousel w-full  relative">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className="">
                         <Slider_1 />

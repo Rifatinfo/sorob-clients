@@ -22,11 +22,10 @@ const KeyArea = () => {
     }, []);
 
     return (
-       <div className="bg-gray-100 md:py-30 py-10">
+       <div className="bg-gray-100 md:py-10 py-10">
          <div className="max-w-6xl mx-auto w-full">
             <div className="text-center">
-                <p className="text-4xl font-semibold">Key Area</p>
-                <p className="mt-6 mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas dignissimos architecto perferendis <br /> cupiditate, ratione quas quasi nemo necessitatibus quo minus!</p>
+                <p className="text-4xl font-semibold mb-6">Key Area</p>
             </div>
             <div className="flex items-center justify-center md:text-center mb-10 text-lg">
                 <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap">
