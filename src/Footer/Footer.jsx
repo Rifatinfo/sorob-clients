@@ -14,27 +14,23 @@ const Footer = () => {
                     {/* Logo Section */}
                     <div className="flex flex-col items-center md:items-start space-y-3">
                         <div className="md:mr-20">
-                            <img  src={FooterLogo} className="w-auto h-20 mx-auto md:mx-0 rounded-full" />
+                            <img src={FooterLogo} className="w-auto h-12 mx-auto md:mx-0 rounded-full" />
                         </div>
                     </div>
 
                     {/* Navigation Links */}
                     <div className="hidden md:flex gap-2  md:justify-center items-center md:gap-4">
-                        <a href="/" className="text-gray-300 hover:text-red-400 transition">Home</a>
-                        {/* <a href="/about" className="text-gray-300 hover:text-red-400 transition">About Us</a> */}
-                        <a href="/key-area" className="text-gray-300 hover:text-red-400 transition">Key Area</a>
-                        <a href="/working-area" className="text-gray-300 hover:text-red-400 transition">Working Area</a>
                         <a href="/event" className="text-gray-300 hover:text-red-400 transition">Event</a>
-                        {/* <a href="/projects" className="text-gray-300 hover:text-red-400 transition">Projects</a>
-                        <a href="/archive" className="text-gray-300 hover:text-red-400 transition">Archive</a>
-                        <a href="/news" className="text-gray-300 hover:text-red-400 transition">News</a> */}
+                        <a href="/news" className="text-gray-300 hover:text-red-400 transition">News</a>
+                        <a href="/archive" className="text-gray-300 hover:text-red-400 transition">contact</a>
                         <a href="/contact" className="text-gray-300 hover:text-red-400 transition col-span-2 hidden md:visible">Contact</a>
                     </div>
 
                     {/* Social Media Icons */}
-                    <div className="flex flex-col items-center md:items-end space-y-3">
-                        <p className="text-gray-400 text-xl">Follow us:</p>
-                        <div className="flex space-x-4 text-white text-lg">
+                    <div className="flex flex-col items-center justify-center md:items-end space-y-3">
+
+                        <div className="flex space-x-4 items-center  text-white text-lg">
+                            <p className="text-gray-400 text-xl">Follow us:</p>
                             <FaFacebook />
                             <FaSquareInstagram />
                             <IoLogoYoutube />
