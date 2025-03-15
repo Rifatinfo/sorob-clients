@@ -4,6 +4,7 @@ import { BiX } from "react-icons/bi";
 import { FaChevronDown } from "react-icons/fa"; // Dropdown icon
 import sorobLogo from "../../assets/sorob.logo.png";
 import { FiSearch } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
@@ -110,7 +111,7 @@ const Navbar = () => {
                     </a>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden xl:flex items-center gap-2 font-semibold text-lg">
+                    <ul className="hidden xl:flex items-center gap-2 font-semibold text-xl">
                         {menuItems.map((item) => (
                             item === "Key Area" ? (
                                 <li key={item} className="relative group" ref={dropdownKeyRef}>
@@ -123,7 +124,7 @@ const Navbar = () => {
 
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownKeyOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {keyAreaItems.map((subItem) => (
-                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                            <li key={subItem} className="text-xl px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
                                                 {subItem}
                                             </li>
                                         ))}
@@ -140,29 +141,30 @@ const Navbar = () => {
 
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {workingAreaItems.map((subItem) => (
-                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                            <li key={subItem} className="text-xl px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
                                                 {subItem}
                                             </li>
                                         ))}
                                     </ul>
                                 </li>
                             ) : item === "About Us" ? (
-                                <li key={item} className="relative group" ref={dropdownAboutRef}>
-                                    <button
-                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
-                                        onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
-                                    >
-                                        {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
-                                    </button>
+                                <Link><li key={item} className="relative group" ref={dropdownAboutRef}>
+                                <button
+                                    className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                    onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
+                                >
+                                    {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
+                                </button>
 
-                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                                        {aboutUsItems.map((subItem) => (
-                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
-                                                {subItem}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
+                                <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                    {aboutUsItems.map((subItem) => (
+                                        <Link to={`/about-us/${subItem.toLowerCase().replace(/\s+/g, "-")}`}><li key={subItem} className="text-xl px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                        {subItem}
+                                    </li></Link>
+                                    ))}
+                                    
+                                </ul>
+                            </li></Link>
                             ) : item === "Projects" ? (
                                 <li key={item} className="relative group" ref={dropdownProjectsRef}>
                                     <button
@@ -215,7 +217,7 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                             ) : (
-                                <li key={item} className="text-lg p-3 rounded-md transition-all cursor-pointer">
+                                <li key={item} className="text-xl p-3 rounded-md transition-all cursor-pointer">
                                     {item}
                                 </li>
                             )
@@ -234,7 +236,7 @@ const Navbar = () => {
                 </header>
 
                 {/* Mobile Menu */}
-                <div className={`text-red-600 text-lg lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
+                <div className={`text-red-600 text-xl lg:hidden absolute top-16 left-0 w-full bg-white flex flex-col items-start font-semibold transition-all duration-500 ease-in z-50 ${open ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0 pointer-events-none"}`}>
                     {menuItems.map((item) => (
                         item === "Key Area" ? (
                             // Key Area Dropdown (Mobile)
@@ -344,14 +346,14 @@ const Navbar = () => {
                                 {/* Dropdown for Mobile */}
                                 <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownEventOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
                                     {eventItems.map((subItem) => (
-                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                                        <li key={subItem} className="text-xl px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
                                             {subItem}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         ) : (
-                            <li key={item} className="text-lg list-none w-full text-start px-4 py-3 border-b transition-all cursor-pointer">
+                            <li key={item} className="text-xl list-none w-full text-start px-4 py-3 border-b transition-all cursor-pointer">
                                 {item}
                             </li>
                         )
