@@ -4,6 +4,7 @@ import {
 import Roots from "../Roots/Roots";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
+import July from "../Pages/July/July";
 
 
 
@@ -21,6 +22,10 @@ import About from "../Pages/About/About";
             path: "about-us/about-sorob",
             element: <About/>,
         },
+        {
+            path : "projects/july-uprising",
+            element : <July/>
+        }
       ]
     },
   ]);

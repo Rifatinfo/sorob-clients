@@ -176,9 +176,9 @@ const Navbar = () => {
 
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownProjectsOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {projectsItems.map((subItem) => (
-                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
-                                                {subItem}
-                                            </li>
+                                            <Link  to={`/projects/${subItem.toLowerCase().replace(/\s+/g, "-")}`}><li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                            {subItem}
+                                        </li></Link>
                                         ))}
                                     </ul>
                                 </li>

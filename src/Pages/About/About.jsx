@@ -1,5 +1,7 @@
 // import aboutImage1 from "../../assets/about-7.jpg";
 import aboutImage2 from "../../assets/about-2.jpg";
+import FAQSection from "../../Components/FaqData/FAQSection";
+import Page from "../../Components/Page/Page";
 import Testimonials from "../../Components/Testimonial/testimonials";
 
 const About = () => {
@@ -8,11 +10,15 @@ const About = () => {
             <div className="relative">
                 {/* Hero Section */}
                 <div className="relative w-full">
-                    <img
-                        className="w-full h-[300px] md:h-[450px] object-cover brightness-75"
-                        src="https://i.ibb.co.com/8gkDbMfs/about-header-banner.png"
-                        alt="Hero Banner"
-                    />
+                    <div className="relative">
+                        <img
+                            className="w-full h-[300px] md:h-[450px] object-cover"
+                            src="https://i.ibb.co.com/BWNbD4k/012.png"
+                            alt="Hero Banner"
+                        />
+                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
+                    </div>
+
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                         <p className="text-lg md:text-xl font-semibold">Home / About Us</p>
                         <h1 className="text-4xl md:text-5xl font-extrabold">About Us</h1>
@@ -66,7 +72,9 @@ const About = () => {
             </div>
 
             {/* testimonial */}
-            <Testimonials/>
+            <Testimonials />
+            <FAQSection/>
+            <Page/>
         </div>
     );
 };
