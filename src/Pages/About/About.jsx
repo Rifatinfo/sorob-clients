@@ -1,6 +1,6 @@
-// import aboutImage1 from "../../assets/about-7.jpg";
 import aboutImage2 from "../../assets/about-2.jpg";
 import FAQSection from "../../Components/FaqData/FAQSection";
+import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 import Page from "../../Components/Page/Page";
 import Testimonials from "../../Components/Testimonial/testimonials";
 
@@ -12,7 +12,7 @@ const About = () => {
                 <div className="relative w-full">
                     <div className="relative">
                         <img
-                            className="w-full h-[300px] md:h-[450px] object-cover"
+                            className="w-full h-[300px] md:h-[350px] object-cover"
                             src="https://i.ibb.co.com/BWNbD4k/012.png"
                             alt="Hero Banner"
                         />
@@ -75,6 +75,8 @@ const About = () => {
             <Testimonials />
             <FAQSection/>
             <Page/>
+            <h2 className="md:text-4xl text-xl font-bold text-center mb-6 text-red-600 mt-17 ">Membership</h2>
+            <ImageSlider/>
         </div>
     );
 };

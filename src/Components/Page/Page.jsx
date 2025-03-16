@@ -1,52 +1,54 @@
 const orgStructure = [
     {
-        name: "CEO", position: "Chief Executive Officer", children: [
-            { name: "CTO", position: "Chief Technology Officer", children: [] },
-            { name: "CFO", position: "Chief Financial Officer", children: [] },
-            { name: "COO", position: "Chief Operating Officer", children: [] },
+        name: "Advisory Panel", position: "", children: [
+            { name: "Board of Member", position: "", children: [] },
+            { name: "Board of Director", position: "", children: [] },
+            { name: "Executive Panel", position: "", children: [] },
+            { name: "Administrative", position: "", children: [] },
+            { name: "Research & Doc", position: "", children: [] },
+            { name: "IT", position: "", children: [] },
+            { name: "Accounts & Audit", position: "", children: [] },
         ]
     },
 ];
 
 export default function Page() {
     return (
-        <div className="max-w-7xl mx-auto p-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-4xl font-extrabold text-center mb-8 text-gray-800">Achieve Your Goal Through Giving</h2>
-
+        <div className="mx-auto  p-4  bg-gray-50 shadow">
             {/* Organizational Chart Section */}
-            <div className="mt-12">
-                <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">Organizational Structure</h2>
-                <div className="flex flex-col items-center">
-                    {/* CEO Card */}
-                    <div className="bg-red-600 text-white px-8 py-6 rounded-full shadow-lg text-center w-60 sm:w-80 md:w-96 border-4 border-white">
-                        <p className="text-2xl font-bold">{orgStructure[0].name}</p>
-                        <p className="text-sm opacity-80">{orgStructure[0].position}</p>
+            <div className="mt-6 sm:mt-4 relative flex flex-col items-center ">
+                <h2 className="text-xl sm:text-3xl font-bold text-center mb-4 sm:mb-6 text-red-600">organogram </h2>
+                {/* Top Level */}
+                <div className="relative flex flex-col items-center">
+                    <div className="bg-red-600 text-white px-3 py-2 sm:px-6 sm:py-4 rounded-full shadow-lg text-center w-32 sm:w-60 border-4 border-white">
+                        <p className="text-xs sm:text-lg font-semibold">{orgStructure[0].name}</p>
                     </div>
-                    <div className="w-1 h-10 bg-gray-400 mt-4"></div>
-                    {/* Children Section */}
-                    <div className="flex justify-center flex-wrap gap-6 mt-6">
-                        {orgStructure[0].children.map((child, index) => (
-                            <div key={index} className="relative flex flex-col items-center">
-                                <div className="w-1 h-10 bg-gray-400 absolute top-[-40px]"></div>
-                                <div className="bg-red-600 text-white px-6 py-4 rounded-full shadow-lg text-center w-48 sm:w-60 md:w-72 border-4 border-white">
-                                    <p className="text-lg font-semibold">{child.name}</p>
-                                    <p className="text-sm opacity-80">{child.position}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <div className="hidden w-1 h-6 sm:h-8 bg-red-600"></div>
                 </div>
-            </div>
-
-
-            {/* Additional Cards Section */}
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {[1, 2, 3, 4].map((card, index) => (
-                    <div key={index} className="bg-red-600 text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 transition-transform duration-300">
-                        <h3 className="text-xl font-bold">Card {card}</h3>
-                        <p className="mt-2 text-sm">This is a description for card {card}. Add relevant information here.</p>
-                    </div>
-                ))}
+                {/* First Level */}
+                <div className="relative flex flex-wrap justify-center items-center gap-2 sm:gap-4 mt-4 sm:mt-6">
+                    <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-red-600 hidden sm:block"></div>
+                    {orgStructure[0].children.slice(0, 3).map((child, index) => (
+                        <div key={index} className="relative flex flex-col items-center mx-2 sm:mx-4">
+                            <div className="w-1 h-6 sm:h-8 bg-red-600"></div>
+                            <div className="bg-red-600 text-white px-3 py-2 sm:px-6 sm:py-4 rounded-full shadow-lg text-center w-32 sm:w-60 border-4 border-white">
+                                <p className="text-xs sm:text-lg font-semibold">{child.name}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {/* Second Level */}
+                <div className="relative flex flex-wrap justify-center items-center gap-2 sm:gap-4 mt-6 sm:mt-12">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-red-600 hidden sm:block"></div>
+                    {orgStructure[0].children.slice(3).map((child, index) => (
+                        <div key={index} className="relative flex flex-col items-center mx-2 sm:mx-4">
+                            <div className="w-1 h-6 sm:h-8 bg-red-600"></div>
+                            <div className="bg-red-600 text-white px-3 py-2 sm:px-6 sm:py-4 rounded-full shadow-lg text-center w-32 sm:w-60 border-4 border-white">
+                                <p className="text-xs sm:text-lg font-semibold">{child.name}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
