@@ -148,23 +148,23 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                             ) : item === "About Us" ? (
-                                <Link><li key={item} className="relative group" ref={dropdownAboutRef}>
-                                <button
-                                    className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
-                                    onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
-                                >
-                                    {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
-                                </button>
+                                <Link to="about-us/about-sorob"><li key={item} className="relative group" ref={dropdownAboutRef}>
+                                    <button
+                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
+                                        onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
+                                    >
+                                        {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
+                                    </button>
 
-                                <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                                    {aboutUsItems.map((subItem) => (
-                                        <Link to={`/about-us/${subItem.toLowerCase().replace(/\s+/g, "-")}`}><li key={subItem} className="text-xl px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
-                                        {subItem}
-                                    </li></Link>
-                                    ))}
-                                    
-                                </ul>
-                            </li></Link>
+                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                        {aboutUsItems.map((subItem) => (
+                                            <Link to="about-us/about-sorob"><li key={subItem} className="text-xl px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                                {subItem}
+                                            </li></Link>
+                                        ))}
+
+                                    </ul>
+                                </li></Link>
                             ) : item === "Projects" ? (
                                 <li key={item} className="relative group" ref={dropdownProjectsRef}>
                                     <button
@@ -176,9 +176,9 @@ const Navbar = () => {
 
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownProjectsOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {projectsItems.map((subItem) => (
-                                            <Link  to={`/projects/${subItem.toLowerCase().replace(/\s+/g, "-")}`}><li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
-                                            {subItem}
-                                        </li></Link>
+                                            <Link to={`/projects/${subItem.toLowerCase().replace(/\s+/g, "-")}`}><li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                                {subItem}
+                                            </li></Link>
                                         ))}
                                     </ul>
                                 </li>
@@ -277,24 +277,27 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         ) : item === "About Us" ? (
-                            // About Us Dropdown (Mobile)
                             <div key={item} className="w-full" ref={dropdownAboutRef}>
                                 <button
                                     className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
                                     onClick={() => setDropdownAboutOpen(!dropdownAboutOpen)}
                                 >
-                                    {item} <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
+                                    {item}
+                                    <FaChevronDown className={`transition-transform ${dropdownAboutOpen ? "rotate-180" : ""}`} />
                                 </button>
 
                                 {/* Dropdown for Mobile */}
                                 <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownAboutOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    {aboutUsItems.map((subItem) => (
-                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
-                                            {subItem}
-                                        </li>
+                                    {aboutUsItems.map((subItem, index) => (
+                                        <Link to="about-us/about-sorob" key={index}>
+                                            <li onClick={() => setOpen(false)} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer hover:bg-red-500 hover:text-white">
+                                                {subItem}
+                                            </li>
+                                        </Link>
                                     ))}
                                 </ul>
                             </div>
+
                         ) : item === "Projects" ? (
                             // Projects Dropdown (Mobile)
                             <div key={item} className="w-full" ref={dropdownProjectsRef}>

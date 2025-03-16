@@ -16,7 +16,7 @@ const About = () => {
                             src="https://i.ibb.co.com/BWNbD4k/012.png"
                             alt="Hero Banner"
                         />
-                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
                     </div>
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
