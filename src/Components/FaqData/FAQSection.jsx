@@ -20,7 +20,12 @@ export default function FAQSection() {
       <div className="flex flex-col md:flex-row items-center gap-12">
         {/* FAQ Section */}
         <div className="space-y-6 w-full md:w-1/2">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-8">Achieve Goal Through Giving</h2>
+        <h2 className="text-xl md:text-4xl font-bold text-center mb-8">Achieve Goal sorob</h2>
+          <div>
+            <p className="text-lg font-semibold">
+            At Sorob, we believe in turning aspirations into achievements. Our goal is to provide the support, tools, and resources you need to reach your full potential. Whether it’s in the professional or personal realm, Sorob is here to guide you on your path to success..
+            </p>
+          </div>
           {faqData.map((faq, index) => (
             <div key={index} className="rounded-lg shadow-md overflow-hidden">
               <button
@@ -33,7 +38,7 @@ export default function FAQSection() {
               {openIndex === index && (
                 <div className="p-4 text-gray-700">{faq.content}</div>
               )}
-            </div>
+           </div>
           ))}
         </div>
 
