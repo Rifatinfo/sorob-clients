@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import goal from '../../assets/goal.jpg';
+import goal from '../../assets/goal.png';
 
 const faqData = [
   { title: "Mission", content: "Our mission is to create a sustainable impact through donations and support for communities in need." },
@@ -17,10 +17,10 @@ export default function FAQSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
     
-      <div className="flex flex-col md:flex-row items-center gap-12">
+      <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-12">
         {/* FAQ Section */}
         <div className="space-y-6 w-full md:w-1/2">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-8">Achieve Goal sorob</h2>
+        <h2 className="text-xl md:text-4xl font-bold text-center mb-8">Achieve Goal</h2>
           <div>
             <p className="text-lg font-semibold">
             At Sorob, we believe in turning aspirations into achievements. Our goal is to provide the support, tools, and resources you need to reach your full potential. Whether it’s in the professional or personal realm, Sorob is here to guide you on your path to success..

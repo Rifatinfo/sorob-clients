@@ -193,12 +193,12 @@ const Navbar = () => {
 
                                     <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownArchiveOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                                         {archiveItems.map((subItem) => (
-                                            <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
-                                                {subItem}
-                                            </li>
+                                           <Link to="Archive/story"><li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
+                                           {subItem}
+                                       </li></Link>
                                         ))}
                                     </ul>
-                                </li>
+                                </li> 
                             ) : item === "Event" ? (
                                 <li key={item} className="relative group" ref={dropdownEventRef}>
                                     <button
@@ -330,9 +330,9 @@ const Navbar = () => {
                                 {/* Dropdown for Mobile */}
                                 <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownArchiveOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
                                     {archiveItems.map((subItem) => (
-                                        <li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
-                                            {subItem}
-                                        </li>
+                                        <Link to="Archive/story"><li onClick={() => setOpen(false)} key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
+                                        {subItem}
+                                    </li></Link>
                                     ))}
                                 </ul>
                             </div>
