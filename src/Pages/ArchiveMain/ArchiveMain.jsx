@@ -1,3 +1,4 @@
+import VideosAndPhotos from "../../Components/VideosAndPhotos/VideosAndPhotos";
 
 
 const ArchiveMain = () => {
@@ -45,6 +46,11 @@ const ArchiveMain = () => {
                     <button className="mt-6 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
                       See All Story
                     </button>
+                </div>
+
+                  {/* tab section  */}
+                <div>
+                  <VideosAndPhotos/>
                 </div>
             </div>
         </div>

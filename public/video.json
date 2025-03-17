@@ -1,0 +1,163 @@
+[
+    {
+      "id": "1",
+      "thumbnail_url": "https://img.youtube.com/vi/Oq_27I9IMvc/maxresdefault.jpg",
+      "video_link": "https://www.youtube.com/watch?v=nVTdukNJdtM",
+      "title": "Epic Adventure",
+      "brand_name": "CineMax Studios",
+      "editing_cast": {
+        "director": "John Doe",
+        "editor": "Jane Smith",
+        "cinematographer": "Robert Brown",
+        "sound_designer": "Alice Johnson"
+      },
+      "description": "An epic adventure awaits in this thrilling movie trailer, featuring stunning visuals and an immersive storyline.",
+      "category": "Movie Trailer",
+      "duration": "2m 30s",
+      "video_type": "Trailer",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4"
+    },
+    {
+      "id": "2",
+      "thumbnail_url": "https://img.youtube.com/vi/DfGS21Xgdjw/hqdefault.jpg",
+      "video_link": "https://www.youtube.com/watch?v=DfGS21Xgdjw",
+      "title": "Latest Smartphone 2025",
+      "brand_name": "TechGuru Reviews",
+      "editing_cast": {
+        "host": "Michael Lee",
+        "video_editor": "Sarah White",
+        "graphics_designer": "Tom Harris",
+        "script_writer": "Emily Davis"
+      },
+      "description": "A detailed review of the latest smartphone of 2025, covering features, performance, and camera quality.",
+      "category": "Technology Review",
+      "duration": "15m 45s",
+      "video_type": "Review",
+      "resolution": "4K",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4",
+      "frame_rate": "60fps"
+    },
+    {
+      "id": "3",
+      "thumbnail_url": "https://img.youtube.com/vi/x0yab6GPxf4/hqdefault.jpg",
+      "video_link": "https://www.youtube.com/watch?v=x0yab6GPxf4",
+      "title": "Italian Pasta",
+      "brand_name": "Gourmet Academy",
+      "editing_cast": {
+        "chef": "Sophia Martinez",
+        "video_editor": "James Wilson",
+        "food_stylist": "Linda Scott",
+        "sound_engineer": "David Thompson"
+      },
+      "description": "Join Chef Sophia as she walks you through the process of making authentic Italian pasta from scratch.",
+      "category": "Cooking & Food",
+      "duration": "25m 10s",
+      "video_type": "Tutorial",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4",
+      "frame_rate": "30fps"
+    },
+    {
+      "id": "4",
+      "thumbnail_url": "https://img.youtube.com/vi/EsjqcfYHyoE/hqdefault.jpg",
+      "video_link": "https://www.youtube.com/watch?v=EsjqcfYHyoE",
+      "title": "30 Days to Strength",
+      "brand_name": "FitLife Channel",
+      "editing_cast": {
+        "trainer": "Jake Anderson",
+        "video_editor": "Laura Green",
+        "music_producer": "Chris Carter"
+      },
+      "description": "Follow this 30-day strength-building challenge with expert trainer Jake Anderson.",
+      "category": "Health & Fitness",
+      "duration": "18m 20s",
+      "video_type": "Workout",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4",
+      "frame_rate": "30fps"
+    },
+    {
+      "id": "5",
+      "thumbnail_url": "https://img.youtube.com/vi/FWA3rrii_vc/hqdefault.jpg",
+      "video_link": "https://www.youtube.com/watch?v=FWA3rrii_vc",
+      "title": "NASA's New Mission",
+      "brand_name": "SpaceVision",
+      "editing_cast": {
+        "narrator": "David Williams",
+        "video_editor": "Emma Roberts",
+        "animator": "Liam Thomas"
+      },
+      "description": "An in-depth look at NASA's latest mission to explore the Red Planet.",
+      "category": "Science & Space",
+      "duration": "22m 15s",
+      "video_type": "Documentary",
+      "resolution": "4K",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4",
+      "frame_rate": "60fps"
+    },
+    {
+      "id": "6",
+      "thumbnail_url": "https://img.youtube.com/vi/vdrDiEWTTBg/hqdefault.jpg",
+      "video_link": "https://www.youtube.com/watch?v=n370FxfwJa8",
+      "title": "Easy Wall Art",
+      "brand_name": "Creative Hands",
+      "editing_cast": {
+        "host": "Anna Parker",
+        "video_editor": "Ryan Cooper",
+        "set_designer": "Grace Moore"
+      },
+      "description": "Transform your home with easy and creative wall art ideas.",
+      "category": "DIY & Home Improvement",
+      "duration": "12m 30s",
+      "video_type": "Tutorial",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4"
+    },
+    {
+      "id": "7",
+      "thumbnail_url": "https://example.com/thumb7.jpg",
+      "video_link": "https://example.com/video7.mp4",
+      "title": "Ancient Civilizations",
+      "brand_name": "History Uncovered",
+      "editing_cast": {
+        "narrator": "Christopher Adams",
+        "video_editor": "Rachel Simmons",
+        "historian": "Dr. Olivia Clark"
+      },
+      "description": "A deep dive into the fascinating history of ancient civilizations around the world.",
+      "category": "History & Culture",
+      "duration": "45m 00s",
+      "video_type": "Educational",
+      "resolution": "4K",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4",
+      "frame_rate": "30fps"
+    },
+    {
+      "id": "8",
+      "thumbnail_url": "https://example.com/thumb8.jpg",
+      "video_link": "https://example.com/video8.mp4",
+      "title": "Guitar Lessons ",
+      "brand_name": "MusicPro Academy",
+      "editing_cast": {
+        "instructor": "Kevin Lewis",
+        "video_editor": "Mark Hall",
+        "sound_engineer": "Ethan Ross"
+      },
+      "description": "Learn the basics of guitar playing with easy step-by-step lessons.",
+      "category": "Music & Instruments",
+      "duration": "30m 20s",
+      "video_type": "Tutorial",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "file_format": "MP4",
+      "frame_rate": "30fps"
+    }
+  ]
