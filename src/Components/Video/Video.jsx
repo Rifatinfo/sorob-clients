@@ -97,14 +97,14 @@ const Video = () => {
                             <div key={singleItem.id}>
                                 <div>
                                     <div className="relative md:-space-y-5.5 space-y-2">
-                                        <figure className="h-[174px]">
+                                        <figure >
                                             <img
                                                 className="rounded-2xl"
                                                 src="https://i.ibb.co.com/rKN0tLcZ/50.jpg"
                                                 alt="Shoes" />
                                         </figure>
                                         <div className="">
-                                            <p className="text-lg font-semibold  mt-1  md:mt-0">A card component has  </p>
+                                            <p className="text-lg font-semibold  mt-1  md:mt-6">A card component has  </p>
                                             {/* <p className="mb-2"><span className="font-semibold">Brand :</span> component </p> */}
                                         </div>
                                     </div>
