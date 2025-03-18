@@ -3,7 +3,7 @@ import FAQSection from "../../Components/FaqData/FAQSection";
 import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 import Page from "../../Components/Page/Page";
 import Testimonials from "../../Components/Testimonial/testimonials";
-
+import top_banner from "../../assets/all_top_page_bnner.jpg";
 const About = () => {
     return (
         <div>
@@ -13,7 +13,7 @@ const About = () => {
                     <div className="relative">
                         <img
                             className="w-full h-[300px] md:h-[350px] object-cover"
-                            src="https://i.ibb.co.com/BWNbD4k/012.png"
+                            src={top_banner}
                             alt="Hero Banner"
                         />
                         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
@@ -24,6 +24,7 @@ const About = () => {
                         <h1 className="text-4xl md:text-5xl font-extrabold">About Us</h1>
                     </div>
                 </div>
+                {/* https://i.ibb.co.com/BWNbD4k/012.png */}
 
                 {/* About Section */}
                 <div className="md:max-w-7xl md:mx-auto my-20 px-6 md:px-12">
