@@ -12,14 +12,12 @@ const Navbar = () => {
     const [dropdownKeyOpen, setDropdownKeyOpen] = useState(false); // "Key Area" dropdown state
     const [dropdownAboutOpen, setDropdownAboutOpen] = useState(false); // "About Us" dropdown state
     const [dropdownProjectsOpen, setDropdownProjectsOpen] = useState(false); // "Projects" dropdown state
-    const [dropdownArchiveOpen, setDropdownArchiveOpen] = useState(false); // "Archive" dropdown state
     const [dropdownEventOpen, setDropdownEventOpen] = useState(false); // "Event" dropdown state
 
     const dropdownRef = useRef(null); // Ref for "Working Area"
     const dropdownKeyRef = useRef(null); // Ref for "Key Area"
     const dropdownAboutRef = useRef(null); // Ref for "About Us"
     const dropdownProjectsRef = useRef(null); // Ref for "Projects"
-    const dropdownArchiveRef = useRef(null); // Ref for "Archive"
     const dropdownEventRef = useRef(null); // Ref for "Event"
 
     const menuItems = [
@@ -28,7 +26,6 @@ const Navbar = () => {
         "Key Area",
         "Working Area",
         "Projects",
-        "Archive",
         "Event",
         "News",
         "Contact"
@@ -64,12 +61,6 @@ const Navbar = () => {
         "Killing River"
     ];
 
-    const archiveItems = [
-        "Story",
-        "Case Studies",
-        "Photos",
-        "Videos"
-    ];
 
     const eventItems = [
         "Seminar",
@@ -84,14 +75,12 @@ const Navbar = () => {
                 dropdownKeyRef.current && !dropdownKeyRef.current.contains(event.target) &&
                 dropdownAboutRef.current && !dropdownAboutRef.current.contains(event.target) &&
                 dropdownProjectsRef.current && !dropdownProjectsRef.current.contains(event.target) &&
-                dropdownArchiveRef.current && !dropdownArchiveRef.current.contains(event.target) &&
                 dropdownEventRef.current && !dropdownEventRef.current.contains(event.target)
             ) {
                 setDropdownOpen(false);
                 setDropdownKeyOpen(false);
                 setDropdownAboutOpen(false);
                 setDropdownProjectsOpen(false);
-                setDropdownArchiveOpen(false);
                 setDropdownEventOpen(false);
             }
         }
@@ -182,23 +171,6 @@ const Navbar = () => {
                                         ))}
                                     </ul>
                                 </li>
-                            ) : item === "Archive" ? (
-                                <li key={item} className="relative group" ref={dropdownArchiveRef}>
-                                    <button
-                                        className="p-3 flex items-center gap-1 rounded-md transition-all cursor-pointer"
-                                        onClick={() => setDropdownArchiveOpen(!dropdownArchiveOpen)}
-                                    >
-                                        {item} <FaChevronDown className={`transition-transform ${dropdownArchiveOpen ? "rotate-180" : ""}`} />
-                                    </button>
-
-                                    <ul className={`absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${dropdownArchiveOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                                        {archiveItems.map((subItem) => (
-                                           <Link to="Archive/story"><li key={subItem} className="text-lg px-4 py-2 whitespace-nowrap hover:bg-red-500 hover:text-white cursor-pointer">
-                                           {subItem}
-                                       </li></Link>
-                                        ))}
-                                    </ul>
-                                </li> 
                             ) : item === "Event" ? (
                                 <li key={item} className="relative group" ref={dropdownEventRef}>
                                     <button
@@ -317,26 +289,7 @@ const Navbar = () => {
                                     ))}
                                 </ul>
                             </div>
-                        ) : item === "Archive" ? (
-                            // Archive Dropdown (Mobile)
-                            <div key={item} className="w-full" ref={dropdownArchiveRef}>
-                                <button
-                                    className="w-full text-start px-4 py-3 flex items-center justify-between cursor-pointer border-b"
-                                    onClick={() => setDropdownArchiveOpen(!dropdownArchiveOpen)}
-                                >
-                                    {item} <FaChevronDown className={`transition-transform ${dropdownArchiveOpen ? "rotate-180" : ""}`} />
-                                </button>
-
-                                {/* Dropdown for Mobile */}
-                                <ul className={`bg-gray-100 transition-all duration-300 overflow-hidden ${dropdownArchiveOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    {archiveItems.map((subItem) => (
-                                        <Link to="Archive/story"><li onClick={() => setOpen(false)} key={subItem} className="text-lg px-4 py-2 whitespace-nowrap text-red-600 cursor-pointer">
-                                        {subItem}
-                                    </li></Link>
-                                    ))}
-                                </ul>
-                            </div>
-                        ) : item === "Event" ? (
+                        )  : item === "Event" ? (
                             // Event Dropdown (Mobile)
                             <div key={item} className="w-full" ref={dropdownEventRef}>
                                 <button

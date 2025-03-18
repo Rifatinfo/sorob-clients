@@ -26,10 +26,6 @@ import ArchiveMain from "../Pages/ArchiveMain/ArchiveMain";
         {
             path : "projects/july-uprising",
             element : <July/>
-        },
-        {
-          path : "Archive/story",
-          element : <ArchiveMain/>
         }
       ]
     },

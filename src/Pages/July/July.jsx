@@ -3,12 +3,14 @@ import Martyr from "./Martyr/Martyr";
 import Injured from "./Injured/Injured";
 import Revolutionary from "./Revolutionary/Revolutionary";
 import StatsSection from "./Injured/StatsSection";
+import ArchiveMain from "../ArchiveMain/ArchiveMain";
 
 const July = () => {
     const [activeTab, setActiveTab] = useState("Martyr");
 
     return (
         <div className="max-w-7xl mx-auto px-4">
+  
              <StatsSection/>
             {/* Tab Buttons */}
             <div className="flex justify-center mt-20">
@@ -43,6 +45,7 @@ const July = () => {
                 {activeTab === "Injured" && <Injured />}
                 {activeTab === "Revolutionary" && <Revolutionary />}
             </div>
+            <ArchiveMain/>
         </div>
     );
 };

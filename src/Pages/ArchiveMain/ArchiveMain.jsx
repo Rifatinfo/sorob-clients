@@ -23,10 +23,10 @@ const ArchiveMain = () => {
         }
     ];
     return (
-        <div className="max-w-7xl mx-auto">
-            <div className="p-4  lg:p-8">
+        <div className="max-w-7xl mx-auto mt-10">
+            <div className="p-4">
             <h2 className="text-4xl font-bold text-brown-800 mt-2 mb-4">
-                Story
+                Case Studies
             </h2>
                 <div className="space-y-12">
                     {stories.map((story, index) => (
