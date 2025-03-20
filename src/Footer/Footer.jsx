@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Footer Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-1.5 md:gap-8 text-center md:text-left">
 
                     {/* Logo Section */}
                     <div className="flex flex-col items-center md:items-start space-y-3">

@@ -9,14 +9,14 @@ const Navbar = () => {
     const [active, setActive] = useState("Home"); // Track active menu item
 
     const menuItems = [
-        "Home",
-        "About Us",
-        "Key Area",
-        "Working Area",
-        "Projects",
-        "Event",
-        "News",
-        "Contact"
+        { name: "Home", link: "/" },
+        { name: "About Us", link: "/about" },
+        { name: "Key Area", link: "/" },
+        { name: "Working Area", link: "/" },
+        { name: "Projects", link: "/" },
+        { name: "Event", link: "/" },
+        { name: "News", link: "/news" },
+        { name: "Contact", link: "/contact" }
     ];
 
     const handleNavClick = (item) => {
@@ -36,13 +36,13 @@ const Navbar = () => {
                 <ul className="hidden xl:flex items-center gap-4 font-semibold text-xl">
                     {menuItems.map((item) => (
                         <li
-                            key={item}
-                            onClick={() => handleNavClick(item)}
+                            key={item.name}
+                            onClick={() => handleNavClick(item.name)}
                             className={`text-xl px-4 py-2 rounded-md cursor-pointer transition-all 
-                                ${active === item ? "text-red-600" : "hover:text-[#C73450]"}
-                            `}
+            ${active === item.name ? "text-red-600" : "hover:text-[#C73450]"}
+        `}
                         >
-                            {item}
+                            <a href={item.link}>{item.name}</a>
                         </li>
                     ))}
                 </ul>
@@ -62,19 +62,19 @@ const Navbar = () => {
             </header>
 
             {/* Mobile Menu Overlay & Menu */}
-            <div 
+            <div
                 className={`fixed inset-0 h-screen transition-opacity duration-700 ease-in-out z-50 
                 ${open ? "bg-red-600/70 opacity-100" : "opacity-0 pointer-events-none"}`}
                 onClick={() => setOpen(false)} // Click outside to close
             >
                 {/* Menu Container */}
-                <div 
+                <div
                     className={`absolute top-0 left-0 h-full bg-white w-2/4 max-w-[300px] shadow-lg 
                     transition-transform duration-500 ease-in-out delay-200 ${open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
                     onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
                 >
                     {/* Close Button */}
-                    <span 
+                    <span
                         className="absolute top-3 right-3 text-3xl text-red-600 cursor-pointer"
                         onClick={() => setOpen(false)}
                     >
@@ -91,7 +91,7 @@ const Navbar = () => {
                                     ${active === item ? "bg-red-600 text-white" : "hover:bg-gray-200"}
                                 `}
                             >
-                                {item}
+                                <a href={item.link}>{item.name}</a>
                             </li>
                         ))}
                     </ul>

@@ -5,7 +5,7 @@ import Roots from "../Roots/Roots";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import July from "../Pages/July/July";
-import ArchiveMain from "../Pages/ArchiveMain/ArchiveMain";
+// import ArchiveMain from "../Pages/ArchiveMain/ArchiveMain";
 import ViolenceAtCampus from "../Pages/ViolenceAtCampus/ViolenceAtCampus";
 import Seminear from "../Pages/Seminear/Seminear";
 
@@ -22,7 +22,7 @@ import Seminear from "../Pages/Seminear/Seminear";
           element: <Home/>
         },
         {
-            path: "about-us/about-sorob",
+            path: "/about",
             element: <About/>,
         },
         {

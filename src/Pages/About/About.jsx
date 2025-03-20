@@ -20,7 +20,7 @@ const About = () => {
                     </div>
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-                        <p className="text-lg md:text-xl font-semibold">Home / About Us</p>
+                        {/* <p className="text-lg md:text-xl font-semibold">Home / About Us</p> */}
                         <h1 className="text-4xl md:text-5xl font-extrabold">About Us</h1>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ const About = () => {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
 
                         {/* Image Section */}
-                        <div className="relative w-full md:w-1/2 flex justify-center">
+                        <div className="relative mr-14 md:mr-0 w-full md:w-1/2 flex justify-center">
                             <img
                                 className="rounded-lg w-3/4 md:w-full shadow-lg"
                                 src="https://img.freepik.com/premium-photo/bangladesh-victory-day-banner-flyer-bangladesh-victory-day-background_539191-113031.jpg?ga=GA1.1.860420525.1723460227&semt=ais_hybrid"
