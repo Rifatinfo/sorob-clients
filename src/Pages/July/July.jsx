@@ -14,7 +14,7 @@ const July = () => {
                 <div className="relative w-full">
                     <div className="relative">
                         <img
-                            className="w-full h-[300px] md:h-[350px] object-cover"
+                            className="w-full h-[200px] md:h-[300px] object-cover"
                             src={top_banner}
                             alt="Hero Banner"
                         />

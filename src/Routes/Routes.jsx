@@ -6,6 +6,8 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import July from "../Pages/July/July";
 import ArchiveMain from "../Pages/ArchiveMain/ArchiveMain";
+import ViolenceAtCampus from "../Pages/ViolenceAtCampus/ViolenceAtCampus";
+import Seminear from "../Pages/Seminear/Seminear";
 
 
 
@@ -26,6 +28,14 @@ import ArchiveMain from "../Pages/ArchiveMain/ArchiveMain";
         {
             path : "projects/july-uprising",
             element : <July/>
+        },
+        {
+            path : "projects/violence-at-campus",
+            element : <ViolenceAtCampus/>
+        },
+        {
+          path : "/Event/seminar",
+          element : <Seminear/>
         }
       ]
     },
