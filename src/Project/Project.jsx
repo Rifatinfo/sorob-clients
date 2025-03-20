@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Project = () => {
     const projectData = [
@@ -72,12 +73,14 @@ const Project = () => {
                     <div className="container mx-auto px-4">
                         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6">
                             {projectData.map((project, index) => (
-                                <div key={index} className="bg-white p-6 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-                                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md mb-4" />
-                                    <h3 className="text-xl font-semibold text-black">{project.title}</h3>
-                                    <p className="text-black">{project.description}</p>
-                                    <a href={project.link} className=" mt-4 inline-block text-black font-semibold">Learn More →</a>
-                                </div>
+                                <Link to={project.link}>
+                                    <div key={index} className="bg-white p-6 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md mb-4" />
+                                        <h3 className="text-xl font-semibold text-black">{project.title}</h3>
+                                        <p className="text-black">{project.description}</p>
+                                        <a href={project.link} className=" mt-4 inline-block text-black font-semibold">Learn More →</a>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

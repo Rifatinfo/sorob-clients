@@ -26,7 +26,7 @@ import Seminear from "../Pages/Seminear/Seminear";
             element: <About/>,
         },
         {
-            path : "projects/july-uprising",
+            path : "/projects/july-uprising",
             element : <July/>
         },
         {
@@ -34,7 +34,7 @@ import Seminear from "../Pages/Seminear/Seminear";
             element : <ViolenceAtCampus/>
         },
         {
-          path : "/Event/seminar",
+          path : "/event",
           element : <Seminear/>
         }
       ]

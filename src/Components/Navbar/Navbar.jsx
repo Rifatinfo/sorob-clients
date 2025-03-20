@@ -14,7 +14,7 @@ const Navbar = () => {
         { name: "Key Area", link: "/" },
         { name: "Working Area", link: "/" },
         { name: "Projects", link: "/" },
-        { name: "Event", link: "/" },
+        { name: "Event", link: "/event" },
         { name: "News", link: "/news" },
         { name: "Contact", link: "/contact" }
     ];

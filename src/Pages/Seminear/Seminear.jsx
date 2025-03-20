@@ -90,7 +90,7 @@ const Seminear = () => {
             </div>
 
 
-            <section className="dark:bg-gray-100 dark:text-gray-800">
+            <section className="bg-gray-100 ">
                 <div className="max-w-7xl p-6 mx-auto space-y-6 sm:space-y-12">
                     {posts
                         .filter((post) => post.large)
@@ -98,7 +98,7 @@ const Seminear = () => {
                             <a
                                 key={post.id}
                                 href="#"
-                                className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
+                                className="bg-gray-50 border-4 rounded-md border-white block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
                             >
                                 <img
                                     src={post.image}
@@ -125,7 +125,7 @@ const Seminear = () => {
                                 <a
                                     key={post.id}
                                     href="#"
-                                    className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
+                                    className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-50 border-4 rounded-md border-white"
                                 >
                                     <img
                                         role="presentation"
