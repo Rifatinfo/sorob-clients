@@ -3,6 +3,7 @@ import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiX } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 import sorobLogo from "../../assets/sorob.logo.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
@@ -11,9 +12,9 @@ const Navbar = () => {
     const menuItems = [
         { name: "Home", link: "/" },
         { name: "About Us", link: "/about" },
-        { name: "Key Area", link: "/" },
-        { name: "Working Area", link: "/" },
-        { name: "Projects", link: "/" },
+        { name: "Key Area", link: "/", id: "Key Area" },
+        { name: "Working Area", link: "/", id: "Working Area" },
+        { name: "Projects", link: "/", id: "Projects" },
         { name: "Event", link: "/event" },
         { name: "News", link: "/news" },
         { name: "Contact", link: "/contact" }
@@ -35,17 +36,21 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <ul className="hidden xl:flex items-center gap-4 font-semibold text-xl">
                     {menuItems.map((item) => (
-                        <li
-                            key={item.name}
-                            onClick={() => handleNavClick(item.name)}
-                            className={`text-xl px-4 py-2 rounded-md cursor-pointer transition-all 
-            ${active === item.name ? "text-red-600" : "hover:text-[#C73450]"}
-        `}
-                        >
-                            <a href={item.link}>{item.name}</a>
+                        <li key={item.name}>
+                            <Link
+                                to={item.id} // Scroll target
+                                smooth={true}
+                                duration={500}
+                                onClick={() => handleNavClick(item.name)}
+                                className={`text-xl px-4 py-2 rounded-md cursor-pointer transition-all 
+                               ${active === item.name ? "text-red-600" : "hover:text-[#C73450]"}`}
+                            >
+                                {item.name}
+                            </Link>
                         </li>
                     ))}
                 </ul>
+
 
                 {/* Search Icon */}
                 <div className="hidden md:flex items-center gap-3">
@@ -69,7 +74,7 @@ const Navbar = () => {
             >
                 {/* Menu Container */}
                 <div
-                    className={`absolute top-0 left-0 h-full bg-white w-2/4 max-w-[300px] shadow-lg 
+                    className={`absolute top-0 left-0 h-full bg-white w-2/4  rounded-r-xl max-w-[300px] shadow-lg 
                     transition-transform duration-500 ease-in-out delay-200 ${open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
                     onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
                 >
@@ -84,17 +89,24 @@ const Navbar = () => {
                     {/* Mobile Menu Items */}
                     <ul className="text-red-600 font-semibold flex flex-col pt-10">
                         {menuItems.map((item) => (
-                            <li
-                                key={item}
-                                onClick={() => handleNavClick(item)}
-                                className={`w-full list-none px-6 py-3 border-b cursor-pointer transition-all 
-                                    ${active === item ? "bg-red-600 text-white" : "hover:bg-gray-200"}
-                                `}
-                            >
-                                <a href={item.link}>{item.name}</a>
+                            <li key={item.name} className="w-full list-none">
+                                <Link
+                                    to={item.id}
+                                    smooth={true}
+                                    duration={500}
+                                    className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
+                                 hover:bg-gray-200"
+                                    onClick={() => {
+                                        handleNavClick(item.name);
+                                        setTimeout(() => setOpen(false), 100); // Delay closing slightly to allow scroll event
+                                    }}
+                                >
+                                    {item.name}
+                                </Link>
                             </li>
                         ))}
                     </ul>
+
                 </div>
             </div>
         </div>
