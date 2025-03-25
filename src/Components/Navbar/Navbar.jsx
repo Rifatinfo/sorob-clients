@@ -1,13 +1,17 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiX } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 import sorobLogo from "../../assets/sorob.logo.png";
-import { Link } from "react-scroll";
+import {  Link as ScrollLink } from "react-scroll";
+import { Link, Link as RouterLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
     const [active, setActive] = useState("Home"); // Track active menu item
+    const location = useLocation()
+    console.log(location, active);
+    
 
     const menuItems = [
         { name: "Home", link: "/" },
@@ -15,7 +19,7 @@ const Navbar = () => {
         { name: "Key Area", link: "/", id: "Key Area" },
         { name: "Working Area", link: "/", id: "Working Area" },
         { name: "Projects", link: "/", id: "Projects" },
-        { name: "Event", link: "/event" },
+        { name: "Event", link: "/Event" },
         { name: "News", link: "/news" },
         { name: "Contact", link: "/contact" }
     ];
@@ -34,23 +38,19 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop Menu */}
-                <ul className="hidden xl:flex items-center gap-4 font-semibold text-xl">
+                <ul className="hidden xl:flex items-center gap-8 font-semibold text-xl">
                     {menuItems.map((item) => (
                         <li key={item.name}>
-                            <Link
-                                to={item.id} // Scroll target
-                                smooth={true}
-                                duration={500}
-                                onClick={() => handleNavClick(item.name)}
-                                className={`text-xl px-4 py-2 rounded-md cursor-pointer transition-all 
-                               ${active === item.name ? "text-red-600" : "hover:text-[#C73450]"}`}
-                            >
-                                {item.name}
-                            </Link>
+                            {
+                                item.id ? (location.pathname === '/' ? (<ScrollLink to={item.id} smooth={true} duration={500} className="hover:text-red-600">
+                                    {item.name}
+                                </ScrollLink>) : (<RouterLink to={`/${item.id}`} className="hover:text-red-600">
+                                    {item.name}
+                                </RouterLink>)) : (<RouterLink to={item.link} className="hover:text-red-600">{item.name}</RouterLink>)
+                            }
                         </li>
                     ))}
                 </ul>
-
 
                 {/* Search Icon */}
                 <div className="hidden md:flex items-center gap-3">
@@ -87,7 +87,7 @@ const Navbar = () => {
                     </span>
 
                     {/* Mobile Menu Items */}
-                    <ul className="text-red-600 font-semibold flex flex-col pt-10">
+                    {/* <ul className="text-red-600 font-semibold flex flex-col pt-10">
                         {menuItems.map((item) => (
                             <li key={item.name} className="w-full list-none">
                                 <Link
@@ -105,7 +105,38 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
+
+                    {
+                        <ul className="text-red-600 font-semibold flex flex-col pt-10">
+                              {menuItems.map((item) => (
+                                <li key={item.name} className="w-full list-none">
+                                   {
+                                    item.id ? (
+                                        location.pathname ===  '/' ? (<ScrollLink to={item.id}
+                                            smooth={true}
+                                            duration={500}
+                                            className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
+                                         hover:bg-gray-200"
+                                            onClick={() => {
+                                                handleNavClick(item.name);
+                                                setTimeout(() => setOpen(false), 100); // Delay closing slightly to allow scroll event
+                                            }}>{item.name}</ScrollLink>) : (<RouterLink to={`${item.name}`} className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
+                                                hover:bg-gray-200"
+                                                   onClick={() => {
+                                                       handleNavClick(item.name);
+                                                       setTimeout(() => setOpen(false), 100); // Delay closing slightly to allow scroll event
+                                                   }}>{item.name}</RouterLink>)
+                                    ) : (<RouterLink to={item.link} className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
+                                                hover:bg-gray-200" onClick={() => {
+                                                    handleNavClick(item.name);
+                                                    setTimeout(() => setOpen(false), 100)
+                                                }}>{item.name}</RouterLink>)
+                                   }
+                                </li>
+                              ))}
+                        </ul>
+                    }
 
                 </div>
             </div>

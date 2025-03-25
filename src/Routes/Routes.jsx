@@ -34,7 +34,7 @@ import Seminear from "../Pages/Seminear/Seminear";
             element : <ViolenceAtCampus/>
         },
         {
-          path : "/event",
+          path : "/Event",
           element : <Seminear/>
         }
       ]

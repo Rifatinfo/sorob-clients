@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <KeyArea id="Key Area" />
-            <ProjectSlider  />
-            <Project   />
+            <KeyArea />
+            <ProjectSlider />
+            <Project />
             <Archive />
         </div>
     );
