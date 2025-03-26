@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import 'react-tabs/style/react-tabs.css';
+import HumanRights from "./HumanRights";
+import Environmental from "./Environmental";
+
 const KeyArea = () => {
     const [data, setData] = useState([]);
     const [activeTab, setActiveTab] = useState("Human Rights");
@@ -27,57 +30,32 @@ const KeyArea = () => {
             <div className="text-center">
                 <p className="text-4xl font-semibold mb-6">Key Area</p>
             </div>
-            <div className="flex items-center justify-center md:text-center mb-10 text-lg">
-                <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap">
+
+            {/* Tab Buttons */}
+            <div className="flex items-center justify-center mb-10 text-lg">
+                <div className="flex items-center -mx-4 overflow-x-auto sm:justify-center flex-nowrap">
                     <button
                         onClick={() => setActiveTab("Human Rights")}
-                        className={`font-semibold flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b-2 transition-all duration-300
+                        className={`font-semibold px-5 py-3 space-x-2 border-b-2 transition-all duration-300
                         ${activeTab === "Human Rights" ? "border-red-600 text-red-600" : "border-transparent text-gray-600"}`}
                     >
                         <span>Human Rights</span>
                     </button>
                     <button
                         onClick={() => setActiveTab("Environment")}
-                        className={`font-semibold flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b-2 transition-all duration-300
+                        className={`font-semibold px-5 py-3 space-x-2 border-b-2 transition-all duration-300
                         ${activeTab === "Environment" ? "border-red-600 text-red-600" : "border-transparent text-gray-600"}`}
                     >
                         <span>Environment</span>
                     </button>
                 </div>
-
-                {/* Tab Content */}
-                <div className="mt-6">
-                    {activeTab === "Human Rights" && <p className="text-lg"></p>}
-                    {activeTab === "Environment" && <p className="text-lg"></p>}
-                </div>
             </div>
 
-            <div >
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-6 md:p-0 p-4">
-                    {data.map(item => (
-                        <div
-                            key={item.id}
-                            className="group p-6 rounded-lg shadow-lg text-center transition-all duration-300 ease-in-out 
-                       h-[360px]  mx-auto flex flex-col items-center justify-center
-                       bg-white hover:bg-red-600 hover:scale-105 hover:shadow-2xl space-y-4"
-                        >
-                            <img
-                                src={item.icon}
-                                alt={item.title}
-                                className="w-16 h-16 transition-all duration-300 group-hover:opacity-90"
-                            />
-                            <h3 className="text-xl font-semibold transition-all duration-300 group-hover:text-white">
-                                {item.title}
-                            </h3>
-                            <p className="text-base text-gray-700 transition-all duration-300 group-hover:text-gray-200">
-                                {item.short_description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-
+            {/* Tab Content */}
+            <div className="mt-6">
+                {activeTab === "Human Rights" && <HumanRights data={data} />}
+                {activeTab === "Environment" && <Environmental/>}
             </div>
-
         </div>
        </div>
     );

@@ -1,4 +1,4 @@
-import img from '../../assets/organogram.jpeg'
+import img from '../../assets/organogram.png'
 const orgStructure = [
     {
         name: "Advisory Panel", position: "", children: [

@@ -3,37 +3,37 @@
     "id": 1,
     "icon": "https://cdn-icons-png.flaticon.com/512/16824/16824566.png",
     "title": "Enforced Disappearances",
-    "short_description": "A guide to understanding enforced disappearances and their impact on human rights."
+    "short_description": "Enforced Disappearances involve the secret abduction or detention of individuals by authorities, violating human rights and causing harm to families."
   },
   {
     "id": 2,
     "icon": "https://cdn-icons-png.flaticon.com/512/11434/11434446.png",
     "title": "Extrajudicial Killing",
-    "short_description": "An overview of extrajudicial killings, their causes, and consequences on justice systems."
+    "short_description": "Extrajudicial Killing is the unlawful execution of individuals by authorities without a legal trial or due process, often as a form of political repression or abuse of power."
   },
   {
     "id": 3,
     "icon": "https://cdn-icons-png.flaticon.com/512/11431/11431698.png",
     "title": "Torture and Mob",
-    "short_description": "Exploring the issues of torture and mob violence in various justice systems worldwide."
+    "short_description": "Torture and Mob refer to cruel treatment by authorities or groups. Torture inflicts severe pain, while mob violence involves brutal, unlawful actions by a crowd, violating human rights."
   },
   {
     "id": 4,
     "icon": "https://cdn-icons-png.flaticon.com/512/3058/3058942.png",
     "title": "Institutional Violence",
-    "short_description": "A study of institutional violence and its implications on societal safety and human rights."
+    "short_description": "Institutional Violence is the systematic abuse or mistreatment by organizations or institutions, often through discriminatory practices or abuse of power, leading to inequality and injustice."
   },
   {
     "id": 5,
     "icon1": "https://cdn-icons-png.flaticon.com/512/9922/9922509.png",
     "icon": "https://cdn-icons-png.flaticon.com/512/11432/11432377.png",
     "title": "Human Rights Defenders",
-    "short_description": "A guide to understanding the role and challenges of human rights defenders."
+    "short_description": "Human Rights Defenders are individuals who advocate for and protect human rights, often facing risks for challenging injustice and oppression."
   },
   {
     "id": 6,
     "icon": "https://cdn-icons-png.flaticon.com/512/10484/10484391.png",
     "title": "Human Rights",
-    "short_description": "An essential overview of human rights, their protections, and how they are safeguarded."
+    "short_description": "Human Rights are basic freedoms and protections every person is entitled to, including the rights to life, liberty, equality, and freedom from discrimination and torture."
   }
 ]

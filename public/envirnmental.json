@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "icon": "https://cdn-icons-png.flaticon.com/512/17954/17954386.png",
+      "title": "Biodiversity Protection",
+      "short_description": "Biodiversity Protection involves efforts to preserve and safeguard various species, ecosystems, and genetic diversity to maintain ecological balance and ensure the health of the planet."
+    },
+    {
+      "id": 2,
+      "icon": "https://cdn-icons-png.flaticon.com/512/9614/9614821.png",
+      "title": "Climate Change Awareness",
+      "short_description": "Climate Change Awareness educates people on the causes and impacts of climate change, promoting sustainable practices for a healthier planet."
+    },
+    {
+      "id": 3,
+      "icon": "https://cdn-icons-png.flaticon.com/512/9614/9614821.png",
+      "title": "Sustainable Agriculture",
+      "short_description": "Sustainable Agriculture focuses on farming practices that protect the environment, conserve resources, and ensure long-term food security while supporting farmers' livelihoods.."
+    },
+    {
+      "id": 4,
+      "icon": "https://cdn-icons-png.flaticon.com/512/3058/3058942.png",
+      "title": "Clean Air & Water",
+      "short_description": "Clean Air & Water focuses on ensuring access to unpolluted air and water, essential for health and environmental sustainability, through pollution control and conservation efforts."
+    },
+    {
+      "id": 5,
+      "icon1": "https://cdn-icons-png.flaticon.com/512/9922/9922509.png",
+      "icon": "https://cdn-icons-png.flaticon.com/512/11432/11432377.png",
+      "title": "Fighting Deforestation",
+      "short_description": "Fighting Deforestation focuses on preventing forest destruction through conservation and sustainable land use to protect ecosystems and combat climate change."
+    },
+    {
+      "id": 6,
+      "icon": "https://cdn-icons-png.flaticon.com/512/10484/10484391.png",
+      "title": "Sustainable Development",
+      "short_description": "Sustainable Development aims to meet present needs without compromising future generations, balancing economic, social, and environmental factors."
+    }
+  ]
+  
