@@ -9,6 +9,9 @@ import ViolenceAtCampus from "../Pages/ViolenceAtCampus/ViolenceAtCampus";
 import Seminear from "../Pages/Seminear/Seminear";
 import News from "../Pages/News/News";
 import JulyVideoDetails from "../Components/Video/JulyVideoDetails";
+import MartyrDetails from "../Pages/July/Martyr/MartyrDetails";
+import InjuredDetails from "../Pages/July/Injured/InjuredDetails";
+import RevolutionaryDetails from "../Pages/July/Revolutionary/RevolutionaryDetails";
 
 
 
@@ -29,6 +32,18 @@ import JulyVideoDetails from "../Components/Video/JulyVideoDetails";
         {
             path : "/projects/july-uprising",
             element : <July/>
+        },
+        {
+          path : "/projects/july-uprising/martyr",
+          element : <MartyrDetails/>
+        },
+        {
+          path : "/projects/july-uprising/injured",
+          element : <InjuredDetails/>
+        },
+        {
+          path : "/projects/july-uprising/projects/july-uprising/revolutionary",
+          element : <RevolutionaryDetails/>
         },
         {
             path : "/projects/july-uprising/videos/:id",

@@ -1,20 +1,17 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
-const PersonCard = () => {
-    const [martyrPerson, setMartyrPerson] = useState([]);
-
-    useEffect(() => {
-        fetch("/person.json")
-            .then((res) => res.json())
-            .then((data) => setMartyrPerson(data));
-    }, []);
-
+const MartyrDetails = () => {
+        const [martyrPerson, setMartyrPerson] = useState([]);
+    
+        useEffect(() => {
+            fetch("/person.json")
+                .then((res) => res.json())
+                .then((data) => setMartyrPerson(data));
+        }, []);
     return (
         <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6">
-                {martyrPerson.slice(0,16).map((martyr, index) => (
+                {martyrPerson.map((martyr, index) => (
                     <motion.div
                         key={martyr.id}
                         className="relative bg-white shadow-lg rounded-2xl p-5 w-72 mx-auto overflow-hidden border border-gray-200"
@@ -52,16 +49,8 @@ const PersonCard = () => {
                     </motion.div>
                 ))}
             </div>
-
-            <div className="text-center">
-                <Link to="/projects/july-uprising/martyr"><button className="mt-6 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
-                    See All martyr
-                </button></Link>
-            </div>
-           
         </div>
     );
 };
 
-export default PersonCard;
-
+export default MartyrDetails;

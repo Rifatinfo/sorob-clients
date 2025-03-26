@@ -1,33 +1,135 @@
-[
+
+
+  [
     {
       "id": 1,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUeMRfVfIyXHI9bXk5ErHzy8xmRnsulk-dxw&s",
       "name": "Asif Mahmud",
       "designation": "Advisor to the Ministry of Labor and Employment",
       "institution": "Dhaka University",
-      "date": "born 14 July 1998",
-      "age" : "26 years",
-      "Place of Birth" : "Akubpur village of Akubpur union of Muradnagar upazila of Comilla"
+      "date_of_birth": "July 14, 1998",
+      "age": "26 years",
+      "place_of_birth": "Akubpur village, Akubpur union, Muradnagar upazila, Comilla"
     },
     {
       "id": 2,
       "image": "https://outspoken.newagebd.com/files/img/202412/cc1d6d729df2f383d73fd07f7acfb9a5.jpg",
-      "name": "Asif Mahmud",
-      "designation": "Convener of National Citizen Party Incumbent",
+      "name": "Nahid Islam",
+      "designation": "Convener of National Citizen Party",
       "institution": "Dhaka University",
-      "date": "born 1998",
-      "age" : "26 years",
-      "Place of Birth" : "Dhaka"
+      "date_of_birth": "March 5, 1997",
+      "age": "27 years",
+      "place_of_birth": "Dhaka"
     },
     {
       "id": 3,
+      "image": "https://example.com/image3.jpg",
+      "name": "Sadia Rahman",
+      "designation": "Youth Leader and Activist",
+      "institution": "Jahangirnagar University",
+      "date_of_birth": "November 20, 1999",
+      "age": "25 years",
+      "place_of_birth": "Chittagong"
+    },
+    {
+      "id": 4,
       "image": "https://outspoken.newagebd.com/files/img/202412/cc1d6d729df2f383d73fd07f7acfb9a5.jpg",
-      "name": "Nahid Islam",
-      "designation": "Convener of National Citizen Party Incumbent",
-      "institution": "Dhaka University",
-      "date": "born 1998",
-      "age" : "26 years",
-      "Place of Birth" : "Dhaka"
+      "name": "Rakib Hasan",
+      "designation": "Student Union President",
+      "institution": "University of Chittagong",
+      "date_of_birth": "May 18, 1996",
+      "age": "28 years",
+      "place_of_birth": "Khulna"
+    },
+    {
+      "id": 5,
+      "image": "https://example.com/image5.jpg",
+      "name": "Farzana Akter",
+      "designation": "Human Rights Activist",
+      "institution": "North South University",
+      "date_of_birth": "August 2, 1995",
+      "age": "29 years",
+      "place_of_birth": "Sylhet"
+    },
+    {
+      "id": 6,
+      "image": "https://example.com/image6.jpg",
+      "name": "Abdul Hannan Masud",
+      "designation": "Political Strategist",
+      "institution": "Rajshahi University",
+      "date_of_birth": "April 10, 1993",
+      "age": "31 years",
+      "place_of_birth": "Barisal"
+    },
+    {
+      "id": 7,
+      "image": "https://example.com/image7.jpg",
+      "name": "Hasnat Abdullah",
+      "designation": "Public Policy Advisor",
+      "institution": "Bangladesh University of Professionals",
+      "date_of_birth": "February 14, 1990",
+      "age": "35 years",
+      "place_of_birth": "Patuakhali"
+    },
+    {
+      "id": 8,
+      "image": "https://example.com/image8.jpg",
+      "name": "Mithila Sultana",
+      "designation": "Political Activist",
+      "institution": "Bangladesh University of Engineering and Technology",
+      "date_of_birth": "December 30, 1996",
+      "age": "28 years",
+      "place_of_birth": "Rangpur"
+    },
+    {
+      "id": 9,
+      "image": "https://example.com/image9.jpg",
+      "name": "Shahriar Alam",
+      "designation": "Social Movement Leader",
+      "institution": "Brac University",
+      "date_of_birth": "February 14, 1999",
+      "age": "25 years",
+      "place_of_birth": "Mymensingh"
+    },
+    {
+      "id": 10,
+      "image": "https://example.com/image10.jpg",
+      "name": "Tania Rahman",
+      "designation": "Freedom of Speech Advocate",
+      "institution": "Independent University Bangladesh",
+      "date_of_birth": "June 6, 1997",
+      "age": "27 years",
+      "place_of_birth": "Gazipur"
+    },
+    {
+      "id": 11,
+      "image": "https://example.com/image11.jpg",
+      "name": "Zahidul Islam",
+      "designation": "Legal Advisor for Protesters",
+      "institution": "Bangladesh University of Professionals",
+      "date_of_birth": "January 1, 1996",
+      "age": "28 years",
+      "place_of_birth": "Narayanganj"
+    },
+    {
+      "id": 12,
+      "image": "https://example.com/image12.jpg",
+      "name": "Sumaiya Kabir",
+      "designation": "Women’s Rights Activist",
+      "institution": "East West University",
+      "date_of_birth": "October 15, 1999",
+      "age": "25 years",
+      "place_of_birth": "Kushtia"
+    },
+    {
+      "id": 12,
+      "image": "https://example.com/image12.jpg",
+      "name": "Sumaiya Kabir",
+      "designation": "Women’s Rights Activist",
+      "institution": "East West University",
+      "date_of_birth": "October 15, 1999",
+      "age": "25 years",
+      "place_of_birth": "Kushtia"
     }
   ]
   
