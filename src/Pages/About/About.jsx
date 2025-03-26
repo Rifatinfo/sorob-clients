@@ -50,21 +50,13 @@ const About = () => {
                                 <div className="max-w-3xl">
                                     <h3 className="text-green-600 text-lg font-semibold uppercase">About Us</h3>
                                     <h2 className="text-4xl font-bold text-brown-800 mt-2">
-                                        The July Revolution of 1830
+                                    Who We Are – Sorob
                                     </h2>
-                                    <p className="text-lg text-orange-500 mt-4">
-                                        A turning point in French history that led to the fall of King Charles X and the rise of constitutional monarchy.
-                                    </p>
+                                   
                                     <p className="text-gray-700 mt-4 leading-relaxed text-lg">
-                                        The July Revolution, also known as the <strong>Three Glorious Days (Les Trois Glorieuses)</strong>, took place in
-                                        <strong> France (July 27–29, 1830)</strong>. It was a direct response to King Charles X’s oppressive policies, including censorship and the
-                                        dissolution of the Chamber of Deputies. The people of Paris, led by workers, students, and middle-class citizens,
-                                        <strong> rose in revolt, built barricades, and overthrew the monarchy</strong>.
+                                    Sorob is a dedicated human rights organization committed to advocating for justice and equality. We stand firm in the face of irregularities, oppression, and tyranny, giving a voice to those who are silenced and fighting for the rights of those whose freedoms are denied. With unwavering conviction, Sorob speaks out against any form of injustice, working tirelessly to create a world where every individual is treated with dignity, respect, and fairness.
                                     </p>
-                                    <p className="text-gray-700 mt-4 leading-relaxed text-lg">
-                                        The revolution resulted in <strong>Louis-Philippe ascending the throne</strong> as the "Citizen King" under the <strong>July Monarchy</strong>, marking a victory for liberal constitutionalism.
-                                        It also <strong>inspired future revolutions</strong> across Europe, proving that <strong>people’s power can bring political change</strong>.
-                                    </p>
+                                   
                                 </div>
                             </section>
                         </div>
@@ -76,6 +68,7 @@ const About = () => {
             <Testimonials />
             <FAQSection/>
             <Page/>
+            {/* <OrgChart/> */}
             <h2 className="md:text-4xl text-xl font-bold text-center mb-6 text-red-600 mt-17 ">Membership</h2>
             <ImageSlider/>
         </div>

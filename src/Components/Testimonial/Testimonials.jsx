@@ -7,7 +7,8 @@ const testimonials = [
     role: "Business Manager",
     image: "https://i.ibb.co.com/JRZk7R4F/slider-6.png",
     rating: 4,
-    text: "Volunteering with Risehand has been a transformative experience for me. Seeing firsthand the impact we make in people's lives is incredibly rewarding.",
+    text: "In moments of struggle, we find our true strength. Every challenge we face together brings us closer, uniting us in resilience and purpose. The power of standing up for what’s right is unstoppable",
+    text_2 : "When voices are silenced, we must speak louder. When hands are tied, we must stand stronger. Together, we rise.",
     photo: "https://i.ibb.co.com/JRZk7R4F/slider-6.png",
   },
   {
@@ -15,7 +16,8 @@ const testimonials = [
     role: "Software Engineer",
     image: "https://i.ibb.co.com/ynHnhFWG/slider-5.jpg",
     rating: 5,
-    text: "Risehand gave me a chance to make a real impact. The smiles I see every day inspire me to continue helping those in need.",
+    text: "Volunteering through Risehand has truly been a life-changing journey. The energy, passion, and unity I’ve witnessed have reinforced my belief in the strength of collective action. Seeing people come together for a cause, standing side by side, is nothing short of inspiring.",
+    text_2 : "Every act of kindness and solidarity makes a difference. I am honored to be part of a movement that fuels hope and change.",
     photo: "https://i.ibb.co.com/ynHnhFWG/slider-5.jpg",
   },
   {
@@ -23,7 +25,8 @@ const testimonials = [
     role: "Project Coordinator",
     image: "https://i.ibb.co.com/JjZWZWRD/slider-4.jpg",
     rating: 5,
-    text: "Helping through Risehand has been the most fulfilling experience of my life. The power of community is truly amazing.",
+    text: "Life moves forward, even when the world seems to turn its back. In the midst of struggle, resilience becomes our greatest strength. Every journey, no matter how difficult, is a testament to the human will to survive and keep going.",
+    text_2 : "Let’s open our eyes, our hearts, and our hands—to help, to uplift, and to stand together.",
     photo: "https://i.ibb.co.com/JjZWZWRD/slider-4.jpg",
   },
   {
@@ -31,7 +34,8 @@ const testimonials = [
     role: "Project Coordinator",
     image: "https://i.ibb.co.com/MydD7RgF/slider-3.jpg",
     rating: 5,
-    text: "Helping through Risehand has been the most fulfilling experience of my life. The power of community is truly amazing.",
+    text: "The strength of the human spirit shines brightest in the face of adversity. Every struggle tells a story of resilience, every hardship a testament to courage. In a world that often turns away, we must choose to see, to care, and to act.",
+    text_2 : "No effort is too small when it comes to making a difference. Together, we can build a world of empathy and justice.",
     photo: "https://i.ibb.co.com/MydD7RgF/slider-3.jpg",
   }
 ];
@@ -49,7 +53,7 @@ const Testimonials = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 my-16">
-      <h2 className="text-lg md:text-4xl font-bold text-center mb-6 text-red-600">What Our People Say About Risehands</h2>
+      <h2 className="text-lg md:text-4xl font-bold text-center mb-6 text-red-600"> People Say About Us</h2>
 
       <div className="flex flex-col md:flex-row md:justify-between items-center gap-12 md:gap-100">
         {/* Left: Text Content */}
@@ -66,7 +70,7 @@ const Testimonials = () => {
           </div>
           <p className="text-2xl font-semibold mt-4">{testimonials[index].text}</p>
           <p className="text-gray-600 mt-4">
-            Every moment spent helping others has strengthened my belief in compassion and the power of community.
+            {testimonials[index].text_2}
           </p>
           <div className="flex items-center mt-6">
             <img src={testimonials[index].image} alt={testimonials[index].name} className="w-12 h-12 rounded-full border-2 border-red-500" />

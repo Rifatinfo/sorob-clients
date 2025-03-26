@@ -34,10 +34,10 @@ const ImageSlider = () => {
           slidesPerView: 3, // For small desktops (3 slides)
         },
         1280: {
-          slidesPerView: 4, // For larger desktops (4 slides)
+          slidesPerView: 3, // For larger desktops (4 slides)
         },
       }}
-      className="w-full max-w-[1200px] mx-auto mb-10"
+      className="w-full max-w-[1200px] mx-auto mb-10 "
     >
       {images.map((src, index) => (
         <SwiperSlide key={index}>
