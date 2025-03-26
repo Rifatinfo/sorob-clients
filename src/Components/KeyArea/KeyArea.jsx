@@ -22,7 +22,7 @@ const KeyArea = () => {
     }, []);
 
     return (
-       <div id="Key Area" className="bg-gray-100 md:py-10 py-10 ">
+       <div id="Key-Area" className="bg-gray-100 md:py-10 py-10 ">
          <div className="max-w-6xl mx-auto w-full">
             <div className="text-center">
                 <p className="text-4xl font-semibold mb-6">Key Area</p>

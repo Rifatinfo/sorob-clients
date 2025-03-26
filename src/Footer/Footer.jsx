@@ -30,7 +30,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center justify-center md:items-end space-y-3">
 
                         <div className="flex space-x-4 items-center  text-white text-lg">
-                            <p className="text-gray-400 text-xl">Follow us:</p>
+                            <p className="text-gray-400 text-[16px]">Follow us:</p>
                             <FaFacebook />
                             <FaSquareInstagram />
                             <IoLogoYoutube />

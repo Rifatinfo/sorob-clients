@@ -83,15 +83,19 @@ const Seminear = () => {
                     </div>
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-                        <p className="text-lg md:text-xl font-semibold">Home / Event</p>
-                        <h1 className="text-4xl md:text-5xl font-extrabold">Seminar</h1>
+                        {/* <p className="text-lg md:text-xl font-semibold">Home / Event</p> */}
+                        <h1 className="text-4xl md:text-5xl font-extrabold">Event</h1>
                     </div>
                 </div>
             </div>
 
 
             <section className="bg-gray-100 ">
+                
                 <div className="max-w-7xl p-6 mx-auto space-y-6 sm:space-y-12">
+                <div className="text-center mb-10">
+                    <h1 className="md:text-4xl text-2xl font-semibold">Seminar</h1>
+                </div>
                     {posts
                         .filter((post) => post.large)
                         .map((post) => (
@@ -115,6 +119,77 @@ const Seminear = () => {
                                     <span className="text-xs dark:text-gray-600">{post.date}</span>
                                     <p>{post.description}</p>
                                 </div>
+                            </a>
+                        ))}
+
+                    <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        {posts
+                            .filter((post) => !post.large)
+                            .map((post) => (
+                                <a
+                                    key={post.id}
+                                    href="#"
+                                    className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-50 border-4 rounded-md border-white"
+                                >
+                                    <img
+                                        role="presentation"
+                                        className="object-cover w-full rounded h-44 dark:bg-gray-500"
+                                        src={post.image}
+                                    />
+                                    <div className="p-6 space-y-2">
+                                        <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                                            {post.title}
+                                        </h3>
+                                        <span className="text-xs dark:text-gray-600">
+                                            {post.date}
+                                        </span>
+                                        <p>{post.description}</p>
+                                    </div>
+                                </a>
+                            ))}
+                    </div>
+
+                    {/* <div className="flex justify-center">
+                        <button
+                            type="button"
+                            className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600"
+                        >
+                            Load more posts...
+                        </button>
+                    </div> */}
+                </div>
+
+                 {/* workshop */}
+
+
+                 <div className="max-w-7xl p-6 mx-auto space-y-6 sm:space-y-12">
+                <div className="text-center mb-10">
+                    <h1 className="md:text-4xl text-2xl font-semibold">Workshop</h1>
+                </div>
+                    {posts
+                        .filter((post) => post.large)
+                        .map((post) => (
+                            <a
+                                key={post.id}
+                                href="#"
+                                className="bg-gray-50 border-4 rounded-md border-white block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
+                            >
+                               
+                                <div className="p-6 space-y-2 lg:col-span-5">
+                                    <h3 className="text-2xl font-semibold sm:text-4xl text-red-600 group-hover:underline group-focus:underline">
+                                        {post.title_upcoming}
+                                    </h3>
+                                    <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
+                                        {post.title}
+                                    </h3>
+                                    <span className="text-xs dark:text-gray-600">{post.date}</span>
+                                    <p>{post.description}</p>
+                                </div>
+                                <img
+                                    src={post.image}
+                                    alt={post.title}
+                                    className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
+                                />
                             </a>
                         ))}
 

@@ -5,9 +5,9 @@ import Roots from "../Roots/Roots";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import July from "../Pages/July/July";
-// import ArchiveMain from "../Pages/ArchiveMain/ArchiveMain";
 import ViolenceAtCampus from "../Pages/ViolenceAtCampus/ViolenceAtCampus";
 import Seminear from "../Pages/Seminear/Seminear";
+import News from "../Pages/News/News";
 
 
 
@@ -36,6 +36,10 @@ import Seminear from "../Pages/Seminear/Seminear";
         {
           path : "/Event",
           element : <Seminear/>
+        },
+        {
+          path : "/news",
+          element : <News/>
         }
       ]
     },

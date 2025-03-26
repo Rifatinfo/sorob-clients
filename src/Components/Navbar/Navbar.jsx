@@ -1,23 +1,24 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiX } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 import sorobLogo from "../../assets/sorob.logo.png";
-import {  Link as ScrollLink } from "react-scroll";
-import { Link, Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
     const [active, setActive] = useState("Home"); // Track active menu item
     const location = useLocation()
-    console.log(location, active);
-    
+    const navigate = useNavigate();
+    console.log(location, active, navigate);
+
 
     const menuItems = [
         { name: "Home", link: "/" },
         { name: "About Us", link: "/about" },
-        { name: "Key Area", link: "/", id: "Key Area" },
-        { name: "Working Area", link: "/", id: "Working Area" },
+        { name: "Key Area", link: "/", id: "Key-Area" },
+        { name: "Working Area", link: "/", id: "Working-Area" },
         { name: "Projects", link: "/", id: "Projects" },
         { name: "Event", link: "/Event" },
         { name: "News", link: "/news" },
@@ -28,7 +29,16 @@ const Navbar = () => {
         setActive(item); // Set active menu
         setOpen(false); // Close mobile menu
     };
+    
+    const handleSectionClick = (id) => {
+        if(location.pathname !== "/"){
+          navigate("/", {replace : true})
 
+          setTimeout(() => {
+            document.getElementById(id)?.scrollIntoView({behavior : "smooth"})
+          }, 100)
+        }
+    }
     return (
         <div className="w-full relative z-10">
             <header className="flex justify-between items-center px-5 py-3 bg-transparent text-black">
@@ -38,7 +48,7 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop Menu */}
-                <ul className="hidden xl:flex items-center gap-8 font-semibold text-xl">
+                {/* <ul className="hidden xl:flex items-center gap-8 font-semibold text-xl">
                     {menuItems.map((item) => (
                         <li key={item.name}>
                             {
@@ -50,7 +60,24 @@ const Navbar = () => {
                             }
                         </li>
                     ))}
+                </ul> */}
+
+                <ul className="hidden xl:flex items-center gap-8 font-semibold text-xl">
+                    {menuItems.map((item) => (
+                        <li key={item.name}>
+                            {
+                                item.id ? (location.pathname === '/' ? (<ScrollLink to={item.id} smooth={true} duration={500} className="hover:text-red-600 cursor-pointer">
+                                    {item.name}
+                                </ScrollLink>) : ( <span onClick={() => handleSectionClick(item.id)} className="hover:text-red-600 cursor-pointer">{item.name}</span>)
+                                    ) : (<RouterLink to={item.link} className="hover:text-red-600 cursor-pointer">{item.name}</RouterLink>)
+                            }
+                        </li>
+                    ))}
                 </ul>
+
+
+
+
 
                 {/* Search Icon */}
                 <div className="hidden md:flex items-center gap-3">
@@ -108,34 +135,50 @@ const Navbar = () => {
                     </ul> */}
 
                     {
-                        <ul className="text-red-600 font-semibold flex flex-col pt-10">
-                              {menuItems.map((item) => (
-                                <li key={item.name} className="w-full list-none">
-                                   {
-                                    item.id ? (
-                                        location.pathname ===  '/' ? (<ScrollLink to={item.id}
+                        <ul className="text-red-600 font-semibold flex flex-col pt-10 w-full">
+                        {menuItems.map((item) => (
+                            <li key={item.name} className="w-full list-none">
+                                {item.id ? (
+                                    location.pathname === "/" ? (
+                                        <ScrollLink
+                                            to={item.id}
                                             smooth={true}
                                             duration={500}
-                                            className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
-                                         hover:bg-gray-200"
+                                            className="block w-full px-6 py-3 border-b cursor-pointer transition-all hover:bg-gray-200"
                                             onClick={() => {
                                                 handleNavClick(item.name);
-                                                setTimeout(() => setOpen(false), 100); // Delay closing slightly to allow scroll event
-                                            }}>{item.name}</ScrollLink>) : (<RouterLink to={`${item.name}`} className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
-                                                hover:bg-gray-200"
-                                                   onClick={() => {
-                                                       handleNavClick(item.name);
-                                                       setTimeout(() => setOpen(false), 100); // Delay closing slightly to allow scroll event
-                                                   }}>{item.name}</RouterLink>)
-                                    ) : (<RouterLink to={item.link} className="block w-full px-6 py-3 border-b cursor-pointer transition-all 
-                                                hover:bg-gray-200" onClick={() => {
-                                                    handleNavClick(item.name);
-                                                    setTimeout(() => setOpen(false), 100)
-                                                }}>{item.name}</RouterLink>)
-                                   }
-                                </li>
-                              ))}
-                        </ul>
+                                                setTimeout(() => setOpen(false), 100);
+                                            }}
+                                        >
+                                            {item.name}
+                                        </ScrollLink>
+                                    ) : (
+                                        <span
+                                            className="block w-full px-6 py-3 border-b cursor-pointer transition-all hover:bg-gray-200"
+                                            onClick={() => {
+                                                handleSectionClick(item.id);
+                                                handleNavClick(item.name);
+                                                setTimeout(() => setOpen(false), 100);
+                                            }}
+                                        >
+                                            {item.name}
+                                        </span>
+                                    )
+                                ) : (
+                                    <RouterLink
+                                        to={item.link}
+                                        className="block w-full px-6 py-3 border-b cursor-pointer transition-all hover:bg-gray-200"
+                                        onClick={() => {
+                                            handleNavClick(item.name);
+                                            setTimeout(() => setOpen(false), 100);
+                                        }}
+                                    >
+                                        {item.name}
+                                    </RouterLink>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
                     }
 
                 </div>
@@ -145,3 +188,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
