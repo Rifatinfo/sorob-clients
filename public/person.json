@@ -5,95 +5,72 @@
       "name": "Abu Sayed",
       "designation": "Student",
       "institution": "Begum Rokeya University, Rangpur",
-      "date": "16th July, 2024"
+      "date": "16th July, 2024",
+      "age" : "23 years",
+      "Place of Birth" : "Babanpur, Pirganj, Rangpur",
+      "How he/she became a MARTYR" : "On July 16, between 2:30 PM and 3:00 PM, during a peaceful demonstration by students advocating for quota reforms in front of Begum Rokeya University, the police used tear gas and baton charges to disperse the students. While the other students left the scene, Abu Saeed stood his ground with a stick in hand. The police fired rubber bullets at him, and he attempted to shield himself with the stick. Eventually, he was hit repeatedly by rubber bullets and fell to the ground, succumbing to his injuries before reaching the hospital.",
+      "Short biography" : "Abu Saeed, a student from the 12th batch of the English Department at Begum Rokeya University, was born in 2001 in Babunpur village, Pirganj Upazila, Rangpur District. He was the youngest among the six sons and three daughters of Mokbul Hossain and Monowara Begum. He received a talent pool scholarship in the fifth grade from the local Zafar Para Government Primary School and then admitted in the local Khalashpi Bimukhi High School, where he passed SSC with a GPA-5. He then joined Rangpur Government College in 2018, completed his intermediate education with a GPA-5, and in 2020, he admitted in the English Department at Begum Rokeya University."
     },
     {
       "id": 2,
-      "image": "https://shohid.info/shohid/mir-mugdho.jpg",
-      "name": "Rahim Uddin",
-      "designation": "Journalist",
-      "institution": "Daily Sun Times",
-      "date": "5th March, 2023"
+      "image": "https://shohid.info/shohid/faisal-ahmed-shanto.jpg",
+      "name": "Faisal Ahmed Shanto",
+      "designation": "Student",
+      "institution": "Omargani M.E.S. College, Chittagong",
+      "date": " 16th July, 2024",
+      "age" : "23 years",
+      "Place of Birth" : "Patenga, Chittagong",
+      "How he/she became a MARTYR" : "Adequate information regarding how Faisal Ahmed Shanto died has not been obtained. The search for details is ongoing.",
+      "Short biography" : "We are seeking more information about Faisal Ahmed Shanto. If you have any details or insights, please help us by sharing them."
     },
     {
       "id": 3,
-      "image": "https://shohid.info/shohid/sheikh-fahmin-zafor.jpg",
-      "name": "Nasima Akter",
-      "designation": "Activist",
-      "institution": "Women Rights Organization",
-      "date": "12th September, 2022"
+      "image": "https://shohid.info/shohid/faisal-ahmed-shanto.jpg",
+      "name": "Md. Wasim Akrum",
+      "designation": "Student",
+      "institution": "Chittagong College, Chittagong",
+      "date": " 16th July, 2024",
+      "age" : "23 years",
+      "Place of Birth" : "Pekua, Cox's Bazar, Chittagong",
+      "How he/she became a MARTYR" : "Adequate information regarding how Md. Wasim Akrum died has not been obtained. The search for details is ongoing",
+      "Short biography" : "We are seeking more information about Md. Wasim Akrum. If you have any details or insights, please help us by sharing them."
+    },
+    {
+      "id": 3,
+      "image": "https://shohid.info/shohid/md-wasim-akrum.jpg",
+      "name": "Md. Wasim Akrum",
+      "designation": "Student",
+      "institution": "Chittagong College, Chittagong",
+      "date": " 16th July, 2024",
+      "age" : "23 years",
+      "Place of Birth" : "Pekua, Cox's Bazar, Chittagong",
+      "How he/she became a MARTYR" : "Adequate information regarding how Md. Wasim Akrum died has not been obtained. The search for details is ongoing",
+      "Short biography" : "We are seeking more information about Md. Wasim Akrum. If you have any details or insights, please help us by sharing them."
     },
     {
       "id": 4,
-      "image": "https://shohid.info/shohid/kalid-hasan-saifullah.jpg",
-      "name": "Jahid Hasan",
-      "designation": "Social Worker",
-      "institution": "Bangladesh NGO Forum",
-      "date": "8th November, 2021"
+      "image": "",
+      "name": "Md. Faruk",
+      "designation": "Employee",
+      "institution": "Employee of a Chair Shop in Sholoshohor, Chattogram",
+      "date": " 16th July, 2024",
+      "age" : "32 years",
+      "Place of Birth" : "Cumilla",
+      "How he/she became a MARTYR" : "Farooq worked in a chair shop in Sholashar. After 3 pm on Tuesday (July 16), he was returning to the shop from his rented house in Lalkhan Bazar in the city. But he fell into the clash between the protestors and the Chhatra League near Sholshahar. At that time Farooq died on the spot after being shot. However, the people around him took him to Chittagong Medical College Hospital.",
+      "Short biography" : "We are seeking more information about Md. Faruk. If you have any details or insights, please help us by sharing them."
     },
     {
       "id": 5,
-      "image": "https://shohid.info/shohid/dr-sajib-sarker.jpg",
-      "name": "Mariam Khatun",
-      "designation": "Lawyer",
-      "institution": "Supreme Court of Bangladesh",
-      "date": "25th January, 2020"
+      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "name": "Student",
+      "designation": "Student",
+      "institution": "R.K.Chowdhury School & College, Sayedabad, Jatrabari, Dhaka",
+      "date": "17th July, 2024",
+      "age" : "22 years",
+      "Place of Birth" : "Cumilla",
+      "How he/she became a MARTYR" : "R K CHOWDHURY COLLEGE",
+      "Short biography" : "We are seeking more information about Sakib Hasan. If you have any details or insights, please help us by sharing them."
     },
-    {
-      "id": 6,
-      "image": "https://shohid.info/shohid/asif-hasan.jpg",
-      "name": "Kamrul Islam",
-      "designation": "Professor",
-      "institution": "University of Dhaka",
-      "date": "30th June, 2019"
-    },
-    {
-      "id": 7,
-      "image": "https://shohid.info/shohid/abu-jafor.jpg",
-      "name": "Taslima Begum",
-      "designation": "Doctor",
-      "institution": "Bangladesh Medical College",
-      "date": "14th August, 2018"
-    },
-    {
-      "id": 8,
-      "image": "https://shohid.info/shohid/ikram-hosen-kawsar.jpg",
-      "name": "Mahmud Hossain",
-      "designation": "Police Officer",
-      "institution": "Dhaka Metropolitan Police",
-      "date": "22nd May, 2017"
-    },
-    {
-      "id": 9,
-      "image": "https://shohid.info/shohid/safkat-samir.jpg",
-      "name": "Sabrina Alam",
-      "designation": "Engineer",
-      "institution": "Bangladesh Telecommunication Company",
-      "date": "10th December, 2016"
-    },
-    {
-      "id": 10,
-      "image": "https://shohid.info/shohid/arman-hossen-rustom.jpg",
-      "name": "Faisal Rahman",
-      "designation": "Artist",
-      "institution": "National Art Academy",
-      "date": "7th April, 2015"
-    },
-    {
-      "id": 11,
-      "image": "https://shohid.info/shohid/hridoy-ahmed-shihab.jpg",
-      "name": "Shamim Khan",
-      "designation": "Entrepreneur",
-      "institution": "Startup Bangladesh",
-      "date": "3rd February, 2014"
-    },
-    {
-      "id": 12,
-      "image": "https://shohid.info/shohid/hridoy-ahmed-shihab.jpg",
-      "name": "Rafiq Ahmed",
-      "designation": "Researcher",
-      "institution": "Bangladesh Institute of Development",
-      "date": "29th July, 2013"
-    }
+    
   ]
   

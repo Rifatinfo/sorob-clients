@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUeMRfVfIyXHI9bXk5ErHzy8xmRnsulk-dxw&s",
+      "name": "Asif Mahmud",
+      "designation": "Advisor to the Ministry of Labor and Employment",
+      "institution": "Dhaka University",
+      "date": "born 14 July 1998",
+      "age" : "26 years",
+      "Place of Birth" : "Akubpur village of Akubpur union of Muradnagar upazila of Comilla"
+    },
+    {
+      "id": 2,
+      "image": "https://outspoken.newagebd.com/files/img/202412/cc1d6d729df2f383d73fd07f7acfb9a5.jpg",
+      "name": "Asif Mahmud",
+      "designation": "Convener of National Citizen Party Incumbent",
+      "institution": "Dhaka University",
+      "date": "born 1998",
+      "age" : "26 years",
+      "Place of Birth" : "Dhaka"
+    },
+    {
+      "id": 3,
+      "image": "https://outspoken.newagebd.com/files/img/202412/cc1d6d729df2f383d73fd07f7acfb9a5.jpg",
+      "name": "Nahid Islam",
+      "designation": "Convener of National Citizen Party Incumbent",
+      "institution": "Dhaka University",
+      "date": "born 1998",
+      "age" : "26 years",
+      "Place of Birth" : "Dhaka"
+    }
+  ]
+  

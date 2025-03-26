@@ -22,7 +22,7 @@ const PersonCard = () => {
                     >
                         {/* Floating Badge */}
                         <div className="absolute top-3 left-3 bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                            #{index + 1}
+                            {index + 1}
                         </div>
 
                         {/* Circular Image */}

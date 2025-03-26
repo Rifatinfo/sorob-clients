@@ -1,4 +1,3 @@
-import StatsSection from "../Injured/StatsSection";
 import PersonCard from "./PersonCard";
 
 const Martyr = () => {
