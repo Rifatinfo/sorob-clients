@@ -17,7 +17,7 @@ const Hero = () => {
                             <br className="hidden md:inline lg:hidden" />that reshaped the future. Rooted in resilience and the pursuit of justice,
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-2.5 text-lg font-semibold border rounded bg-red-600 border-none text-white">Donation</a>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-2.5 text-lg font-semibold border rounded bg-red-600 border-none text-white">Donation Now</a>
                         </div>
                     </div>
                 </div>

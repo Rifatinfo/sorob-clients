@@ -1,9 +1,9 @@
 const Archive = () => {
     const archiveData = [
-        { id: 1, title: "Story", date: "March 5, 2024", description: "An in-depth look at a remarkable historical ." },
-        { id: 2, title: "Case Studies", date: "July 20, 2023", description: "Understanding the impact of the July revolution ." },
-        { id: 3, title: "Photos", date: "September 15, 2022", description: "A deep dive into a into a groundbreaking groundbreaking ." },
-        { id: 4, title: "Videos", date: "November 10, 2021", description: "How cultural changes influenced modern society  into a groundbreaking." },
+        { id: 1, title: "Story", description: "An in-depth look at a remarkable historical ." },
+        { id: 2, title: "Case Studies",  description: "Understanding the impact of the July revolution ." },
+        { id: 3, title: "Photos",description: "A deep dive into a into a groundbreaking groundbreaking ." },
+        { id: 4, title: "Videos",  description: "How cultural changes influenced modern society  into a groundbreaking." },
     ];
 
     return (
