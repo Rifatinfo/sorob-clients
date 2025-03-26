@@ -8,6 +8,7 @@ import July from "../Pages/July/July";
 import ViolenceAtCampus from "../Pages/ViolenceAtCampus/ViolenceAtCampus";
 import Seminear from "../Pages/Seminear/Seminear";
 import News from "../Pages/News/News";
+import JulyVideoDetails from "../Components/Video/JulyVideoDetails";
 
 
 
@@ -28,6 +29,11 @@ import News from "../Pages/News/News";
         {
             path : "/projects/july-uprising",
             element : <July/>
+        },
+        {
+            path : "/projects/july-uprising/videos/:id",
+            element : <JulyVideoDetails/>,
+            loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/videos/${params.id}`)
         },
         {
             path : "projects/violence-at-campus",
