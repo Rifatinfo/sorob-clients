@@ -8,7 +8,7 @@ const ArchiveMain = () => {
     console.log(stories);
     
     useEffect(() => {
-        fetch("http://localhost:5000/projects/july-uprising/stories")
+        fetch("https://sorob-server.onrender.com/projects/july-uprising/stories")
         .then(res => res.json())
         .then(data =>{
             setStories(data);

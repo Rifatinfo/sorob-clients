@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "https://shohid.info/shohid/abu-sayed.jpg",
+      "image": "https://shohid.info/shohid/faisal-ahmed-shanto.jpg",
       "name": "Abu Sayed",
       "designation": "Student",
       "institution": "Begum Rokeya University, Rangpur",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "image": "https://shohid.info/shohid/faisal-ahmed-shanto.jpg",
+      "image": "https://shohid.info/shohid/md-wasim-akrum.jpg",
       "name": "Faisal Ahmed Shanto",
       "designation": "Student",
       "institution": "Omargani M.E.S. College, Chittagong",
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "image": "https://shohid.info/shohid/faisal-ahmed-shanto.jpg",
+      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
       "name": "Md. Wasim Akrum",
       "designation": "Student",
       "institution": "Chittagong College, Chittagong",
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "image": "https://shohid.info/shohid/md-wasim-akrum.jpg",
+      "image": "https://shohid.info/shohid/tahmid-tamim.jpg",
       "name": "Md. Wasim Akrum",
       "designation": "Student",
       "institution": "Chittagong College, Chittagong",
@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "image": "",
+      "image": "https://shohid.info/shohid/shykh-aashhabul-yamin.jpg",
       "name": "Md. Faruk",
       "designation": "Employee",
       "institution": "Employee of a Chair Shop in Sholoshohor, Chattogram",
@@ -61,7 +61,7 @@
     },
     {
       "id": 5,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/jahiduzzaman-tanvin.jpg",
       "name": "Student",
       "designation": "Student",
       "institution": "R.K.Chowdhury School & College, Sayedabad, Jatrabari, Dhaka",
@@ -73,7 +73,7 @@
     },
     {
       "id": 6,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/farhan-faiyaaz.jpg",
       "name": "Tahmid Tamim",
       "designation": "Student",
       "institution": "Qadir Mollah High School, Narsingdi",
@@ -87,7 +87,7 @@
 
      {
       "id": 7,
-      "image":"",
+      "image":"https://shohid.info/shohid/mir-mugdho.jpg",
       "name": "Shykh Aashhabul Yamin",
       "designation": "Student",
       "institution": "Military Institute of Science and Technology",
@@ -99,7 +99,7 @@
 },
 {
       "id": 8,
-      "image": "",
+      "image": "https://shohid.info/shohid/shah-newaz-fahad.jpg",
       "name": "Jahiduzzaman Tanvin",
       "designation": "Student",
       "institution": "Islamic University of Technology, Gazipur.",
@@ -111,7 +111,7 @@
     },
  {
       "id": 9,
-      "image": "",
+      "image": "https://shohid.info/shohid/shakil-parvej.jpg",
       "name": "Farhan Faiyaaz",
       "designation": "Student",
       "institution": "Dhaka Residential Model College,",
@@ -123,7 +123,7 @@
     },
 {
       "id": 10,
-      "image": "",
+      "image": "https://shohid.info/shohid/sheikh-fahmin-zafor.jpg",
       "name": "Mir Mugdho",
       "designation": "Student",
       "institution": "Bangladesh University of professionals,",
@@ -135,7 +135,7 @@
     },
 {
       "id": 11,
-      "image": "",
+      "image": "https://shohid.info/shohid/zillur-sheikh.jpg",
       "name": "Shah Newaz Fahad",
       "designation": "Student",
       "institution": "East West University,",
@@ -147,7 +147,7 @@
     },
 {
       "id": 12,
-      "image": "",
+      "image": "https://shohid.info/shohid/dipto-dey.jpg",
       "name": "Shakil Parvej",
       "designation": "Student",
       "institution": "Manarat International University",
@@ -159,7 +159,7 @@
     },
 {
       "id": 13,
-      "image": "",
+      "image": "https://shohid.info/shohid/rudro-sen.jpg",
       "name": "Sheikh Fahmin Zafor",
       "designation": "Student",
       "institution": "Tongi Govt. College",
@@ -171,7 +171,7 @@
     },
 {
       "id": 14,
-      "image": "",
+      "image": "https://shohid.info/shohid/mehedi-hasan.jpg",
       "name": "Zillur Sheikh",
       "designation": "Student",
       "institution": "Imperial College, Dhaka",
@@ -183,7 +183,7 @@
     },
 {
       "id": 15,
-      "image": "",
+      "image": "https://shohid.info/shohid/emon-ahmed.jpg",
       "name": "Dipto Dey",
       "designation": "Student",
       "institution": "Madaripur Government College",
@@ -195,7 +195,7 @@
     },
 {
       "id": 16,
-      "image": "",
+      "image": "https://shohid.info/shohid/siam-1.jpg",
       "name": "Rudro Sen",
       "designation": "Student",
       "institution": "Shahjalal University of Science and Technology, Sylhet",
@@ -207,7 +207,7 @@
     },
 {
       "id": 17,
-      "image": "",
+      "image": "https://shohid.info/shohid/imon-miah.jpg",
       "name": "Mehedi Hasan",
       "designation": "Journalist Dhaka Times",
       "institution": "",
@@ -219,7 +219,7 @@
     },
 {
       "id": 18,
-      "image": "",
+      "image": "https://shohid.info/shohid/kalid-hasan-saifullah.jpg",
       "name": "Emon Ahmed",
       "designation": "Student",
       "institution": "",
@@ -231,7 +231,7 @@
     },
 {
       "id": 19,
-      "image": "",
+      "image": "https://shohid.info/shohid/asif-iqbal.jpg",
       "name": "Siam",
       "designation": "EmployeeA mobile battery shop, Gulistan,",
       "institution": "",
@@ -243,7 +243,7 @@
     },
 {
       "id": 20,
-      "image": "",
+      "image": "https://shohid.info/shohid/hridoy-chandra-tarua.jpg",
       "name": "Dulal Matbor",
       "designation": "DriverDhaka",
       "institution": "",
@@ -255,7 +255,7 @@
     },
 {
       "id": 21,
-      "image": "",
+      "image": "https://shohid.info/shohid/rahat-hossain.jpg",
       "name": "Muhammad",
       "designation": "Dhaka",
       "institution": "",
@@ -267,7 +267,7 @@
     },
 {
       "id": 22,
-      "image": "",
+      "image": "https://shohid.info/shohid/sabbir-ahmed-jhenaidah.jpg",
       "name": "Sharif Hasan",
       "designation":"Student",
       "institution": "Imperial College,Dhaka",
@@ -279,7 +279,7 @@
     },
 {
       "id": 23,
-      "image": "",
+      "image": "https://shohid.info/shohid/dr-sajib-sarker.jpg",
       "name": "Imon Miah",
       "designation":"Student",
       "institution": "Govt. Shahid Asad College, Shibpur, Narsingdi",
@@ -291,8 +291,8 @@
     },
 {
       "id": 24,
-      "image": "Shakil Hasan",
-      "name": "",
+      "image": "https://shohid.info/shohid/asif-hasan.jpg",
+      "name": "sakib",
       "designation":"Journalist, Daily Vorer Awaz",
       "institution": "",
       "date": " 18th July, 2024",
@@ -303,8 +303,8 @@
     },
 {
       "id": 25,
-      "image": "Khalid Hasan Saifullah",
-      "name": "",
+      "image": "https://shohid.info/shohid/abdullah-al-tahir.jpg",
+      "name": "Khalid Hasan Saifullah",
       "designation":"Student",
       "institution": "Imperial College, Dhaka",
       "date": " 18th July, 2024",
@@ -315,7 +315,7 @@
     },
 {
       "id": 26,
-      "image": "",
+      "image": "https://shohid.info/shohid/saimon-hossain.jpg",
       "name": "Mohammad Imad",
       "designation":"Student",
       "institution": "Patiya Government College, Chittagong",
@@ -327,7 +327,7 @@
     },
 {
       "id": 27,
-      "image": "",
+      "image": "https://shohid.info/shohid/amjad-hosen.jpg",
       "name": "Asif Iqbal",
       "designation":"Student",
       "institution": "Independent University Bangladesh, Dhaka",
@@ -339,7 +339,7 @@
     },
 {
       "id": 28,
-      "image": "",
+      "image": "https://shohid.info/shohid/md-abdul-kaium-ahad.jpg",
       "name": "Hridoy Chandra Tarua",
       "designation":"Student",
       "institution": "University of Chittagong",
@@ -352,7 +352,7 @@
 
 {
       "id": 29,
-      "image": "",
+      "image": "https://shohid.info/shohid/tajul-islam.jpg",
       "name": "Rahat Hossain",
       "designation":"Student",
       "institution": "Nawab Habibullah Model School & College, Dhaka",
@@ -364,7 +364,7 @@
     },
 {
       "id": 30,
-      "image": "",
+      "image": "https://shohid.info/shohid/abu-jafor.jpg",
       "name": "Sabbir Ahmed",
       "designation":"Employee Organ Limited Care",
       "institution": "",
@@ -390,7 +390,7 @@
 
 {
       "id": 99,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/hasan-hossain.jpg",
       "name": "Mohammad Nuru Hussain",
       "designation": "",
       "institution": "",
@@ -402,7 +402,7 @@
     },
 {
       "id": 98,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/md-sajjad-raza.jpg",
       "name": "Huzaif Noor Habib",
       "designation": "Student",
       "institution": "Blue Bird School and College",
@@ -415,7 +415,7 @@
 
 {
       "id": 97,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/md-mokhlesur-rahman.jpg",
       "name": "Biplob Seikh",
       "designation": "",
       "institution": "A factory in Mirpur 12 Rupnagar residential area",
@@ -427,7 +427,7 @@
     },
 {
       "id": 96,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/md-masud-miah.jpg",
       "name": "Nabin Talukdar",
       "designation": "",
       "institution": "",
@@ -440,7 +440,7 @@
 
 {
       "id":95,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/irfan-bhuiyan.jpg",
       "name": "Ahmed Sunny",
       "designation": "Student",
       "institution": "Jameul Uloom Madrasa, Mirpur",
@@ -453,7 +453,7 @@
 
 {
       "id":95,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/mostofa-zaman-shomudro.jpg",
       "name": "Ahmed Sunny",
       "designation": "Student",
       "institution": "Jameul Uloom Madrasa, Mirpur",
@@ -466,7 +466,7 @@
 
 {
       "id":94,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/abu-taher-md-turab.jpg",
       "name": "Dulal Mahmud",
       "designation": "",
       "institution": "",
@@ -479,7 +479,7 @@
 
 {
       "id": 93,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/nadim-mizan.jpg",
       "name": "Alamgir Sheikh",
       "designation": "",
       "institution": "",
@@ -492,7 +492,7 @@
 
 {
       "id": 92,
-      "image": "https://shohid.info/shohid/sakib-hasan.jpg",
+      "image": "https://shohid.info/shohid/abdul-goni.jpg",
       "name": "Naima Sultana",
       "designation": "Student",
       "institution": "Milestone School",

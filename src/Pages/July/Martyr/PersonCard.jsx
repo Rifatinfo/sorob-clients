@@ -6,7 +6,7 @@ const PersonCard = () => {
     const [martyrPerson, setMartyrPerson] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/projects/july-uprising/martyr")
+        fetch("https://sorob-server.onrender.com/projects/july-uprising/martyr")
             .then((res) => res.json())
             .then((data) => setMartyrPerson(data));
     }, []);

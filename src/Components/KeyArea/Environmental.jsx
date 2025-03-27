@@ -5,7 +5,7 @@ const Environmental = () => {
     const [environment , setEnvironment] = useState([]);
 
     useEffect(() => {
-        fetch('../../../public/envirnmental.json')
+        fetch('/envirnmental.json')
         .then(res => res.json())
         .then(data => {
             setEnvironment(data)

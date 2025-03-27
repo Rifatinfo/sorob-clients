@@ -8,7 +8,7 @@ const Video = () => {
     const [sort, setSort] = useState("");
 
     useEffect(() => {
-        fetch('http://localhost:5000/projects/july-uprising/videos')
+        fetch('https://sorob-server.onrender.com/projects/july-uprising/videos')
             .then(res => res.json())
             .then(data => {
                 setAllProduct(data);

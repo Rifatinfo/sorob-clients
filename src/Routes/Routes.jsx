@@ -47,7 +47,7 @@ import AllFactFinding from "../Components/BlogSlider/AllFactFinding";
         {
           path : "/projects/july-uprising/martyr/:id",
           element :<MartyrProfileDetails/>,
-          loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/martyr/${params.id}`)
+          loader : ({params}) => fetch(`https://sorob-server.onrender.com/projects/july-uprising/martyr/${params.id}`)
         },
         {
           path : "/projects/july-uprising/projects/july-uprising/revolutionary",
@@ -56,12 +56,12 @@ import AllFactFinding from "../Components/BlogSlider/AllFactFinding";
         {
             path : "/projects/july-uprising/videos/:id",
             element : <JulyVideoDetails/>,
-            loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/videos/${params.id}`)
+            loader : ({params}) => fetch(`https://sorob-server.onrender.com/projects/july-uprising/videos/${params.id}`)
         },
         {
           path : "/projects/july-uprising/stories/:id",
           element : <StoriesDetails/>,
-          loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/stories/${params.id}`)
+          loader : ({params}) => fetch(`https://sorob-server.onrender.com/projects/july-uprising/stories/${params.id}`)
         },
         {
             path : "projects/violence-at-campus",
