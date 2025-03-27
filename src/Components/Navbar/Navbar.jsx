@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiX } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
@@ -9,10 +9,20 @@ import { Link as ScrollLink } from "react-scroll";
 const Navbar = () => {
     const [open, setOpen] = useState(false); // Mobile menu state
     const [active, setActive] = useState("Home"); // Track active menu item
+    const [scrolling, setScrolling] = useState(false);
+
     const location = useLocation()
     const navigate = useNavigate();
     console.log(location, active, navigate);
-
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolling(window.scrollY > 50);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const menuItems = [
         { name: "Home", link: "/" },
@@ -40,8 +50,8 @@ const Navbar = () => {
         }
     }
     return (
-        <div className="w-full relative z-10">
-            <header className="flex justify-between items-center px-5 py-3 bg-transparent text-black">
+        <div className="w-full relative z-10 ">
+            <header className={`fixed  top-0 left-0 w-full flex justify-between items-center px-5 py-3  text-black  z-50 ${scrolling ? "bg-white shadow-md" : "bg-transparent"}`}>
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-3">
                     <img className="h-[40px] w-auto" src={sorobLogo} alt="Sorob Logo" />

@@ -2,7 +2,7 @@ import heroImage from '../../assets/july_revolution.png';
 
 const Hero = () => {
     return (
-        <div className="flex flex-col-reverse md:flex-row md:gap-60 overflow-hidden -mt-20">
+        <div className="flex flex-col-reverse md:flex-row md:gap-60 overflow-hidden ">
             {/* Text & Background Section */}
             <div className=" relative flex-grow bg-no-repeat bg-cover rounded-xl overflow-hidden flex items-center justify-center flex-col gap-5 text-center w-full md:w-1/2 min-h-[50vh] md:min-h-screen"
                 style={{ backgroundImage: "url('https://i.ibb.co.com/HfyG0r1w/Rifat-mama-2.png')" }}>
