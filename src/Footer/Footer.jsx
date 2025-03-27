@@ -3,6 +3,7 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 // import logo from '../assets/sorob.logo.png'
 import FooterLogo from '../assets/footer_logo.png'
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white py-2">
@@ -13,9 +14,11 @@ const Footer = () => {
 
                     {/* Logo Section */}
                     <div className="flex flex-col items-center md:items-start space-y-3">
+                        <Link to="/">
                         <div className="md:mr-20">
                             <img src={FooterLogo} className="w-auto h-12 mx-auto md:mx-0 rounded-full" />
                         </div>
+                        </Link>
                     </div>
 
                     {/* Navigation Links */}

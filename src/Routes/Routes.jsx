@@ -13,6 +13,8 @@ import MartyrDetails from "../Pages/July/Martyr/MartyrDetails";
 import InjuredDetails from "../Pages/July/Injured/InjuredDetails";
 import RevolutionaryDetails from "../Pages/July/Revolutionary/RevolutionaryDetails";
 import MartyrProfileDetails from "../Pages/July/Martyr/MartyrProfileDetails";
+import StoriesDetails from "../Pages/ArchiveMain/storiesDetails";
+import AllFactFinding from "../Components/BlogSlider/AllFactFinding";
 
 
 
@@ -57,6 +59,11 @@ import MartyrProfileDetails from "../Pages/July/Martyr/MartyrProfileDetails";
             loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/videos/${params.id}`)
         },
         {
+          path : "/projects/july-uprising/stories/:id",
+          element : <StoriesDetails/>,
+          loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/stories/${params.id}`)
+        },
+        {
             path : "projects/violence-at-campus",
             element : <ViolenceAtCampus/>
         },
@@ -67,6 +74,10 @@ import MartyrProfileDetails from "../Pages/July/Martyr/MartyrProfileDetails";
         {
           path : "/news",
           element : <News/>
+        },
+        {
+          path : "/projects/july-uprising/all-fact-finding",
+          element : <AllFactFinding/>
         }
       ]
     },

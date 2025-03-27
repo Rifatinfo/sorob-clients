@@ -21,8 +21,8 @@ const Navbar = () => {
         { name: "Working Area", link: "/", id: "Working-Area" },
         { name: "Projects", link: "/", id: "Projects" },
         { name: "Event", link: "/Event" },
-        { name: "News", link: "/news" },
-        { name: "Contact", link: "/contact" }
+        // { name: "News", link: "/news" },
+        // { name: "Contact", link: "/contact" }
     ];
 
     const handleNavClick = (item) => {

@@ -12,7 +12,7 @@ const About = () => {
                 <div className="relative w-full">
                     <div className="relative">
                         <img
-                            className="w-full h-[300px] md:h-[350px] object-cover"
+                            className="w-full h-[100px] md:h-[200px] object-cover"
                             src={top_banner}
                             alt="Hero Banner"
                         />
@@ -21,7 +21,7 @@ const About = () => {
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                         {/* <p className="text-lg md:text-xl font-semibold">Home / About Us</p> */}
-                        <h1 className="text-4xl md:text-5xl font-extrabold">About Us</h1>
+                        <h1 className="text-xl md:text-3xl font-extrabold">About Us</h1>
                     </div>
                 </div>
                 {/* https://i.ibb.co.com/BWNbD4k/012.png */}

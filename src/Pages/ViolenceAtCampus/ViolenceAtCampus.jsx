@@ -15,7 +15,7 @@ const ViolenceAtCampus = () => {
                 <div className="relative w-full">
                     <div className="relative">
                         <img
-                            className="w-full h-[200px] md:h-[300px] object-cover"
+                            className="w-full h-[100px] md:h-[200px] object-cover"
                             src={top_banner}
                             alt="Hero Banner"
                         />
@@ -24,7 +24,7 @@ const ViolenceAtCampus = () => {
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                         <p className="text-lg md:text-xl font-semibold">Home / Projects</p>
-                        <h1 className="text-4xl md:text-5xl font-extrabold">Violence At Campus</h1>
+                        <h1 className="text-xl md:text-3xl font-extrabold">Violence At Campus</h1>
                     </div>
                 </div>
             </div>
