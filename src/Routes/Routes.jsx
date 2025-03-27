@@ -12,6 +12,7 @@ import JulyVideoDetails from "../Components/Video/JulyVideoDetails";
 import MartyrDetails from "../Pages/July/Martyr/MartyrDetails";
 import InjuredDetails from "../Pages/July/Injured/InjuredDetails";
 import RevolutionaryDetails from "../Pages/July/Revolutionary/RevolutionaryDetails";
+import MartyrProfileDetails from "../Pages/July/Martyr/MartyrProfileDetails";
 
 
 
@@ -40,6 +41,11 @@ import RevolutionaryDetails from "../Pages/July/Revolutionary/RevolutionaryDetai
         {
           path : "/projects/july-uprising/injured",
           element : <InjuredDetails/>
+        },
+        {
+          path : "/projects/july-uprising/martyr/:id",
+          element :<MartyrProfileDetails/>,
+          loader : ({params}) => fetch(`http://localhost:5000/projects/july-uprising/martyr/${params.id}`)
         },
         {
           path : "/projects/july-uprising/projects/july-uprising/revolutionary",

@@ -28,7 +28,7 @@ const VideosAndPhotos = () => {
                 </div>
 
                 {/* Tab Content */}
-                <div className="mt-6 w-full flex justify-center border">
+                <div className="mt-6 w-full flex justify-center">
                     {activeTab === "Videos" && <Video />}
                     {activeTab === "Photos" && <Photo />}
                 </div>

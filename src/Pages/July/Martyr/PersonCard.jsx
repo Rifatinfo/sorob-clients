@@ -6,7 +6,7 @@ const PersonCard = () => {
     const [martyrPerson, setMartyrPerson] = useState([]);
 
     useEffect(() => {
-        fetch("/person.json")
+        fetch("http://localhost:5000/projects/july-uprising/martyr")
             .then((res) => res.json())
             .then((data) => setMartyrPerson(data));
     }, []);
@@ -15,6 +15,7 @@ const PersonCard = () => {
         <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6">
                 {martyrPerson.slice(0,16).map((martyr, index) => (
+                    <Link to={`/projects/july-uprising/martyr/${martyr._id}`}>
                     <motion.div
                         key={martyr.id}
                         className="relative bg-white shadow-lg rounded-2xl p-5 w-72 mx-auto overflow-hidden border border-gray-200"
@@ -50,6 +51,7 @@ const PersonCard = () => {
                             animate={{ opacity: 0.1 }}
                         />
                     </motion.div>
+                    </Link>
                 ))}
             </div>
 
