@@ -1,10 +1,11 @@
+import ReactPlayer from "react-player";
 import { Link, useLoaderData } from "react-router-dom";
 
 const MartyrProfileDetails = () => {
   const MartyrProfileDetails = useLoaderData();
   return (
     <div>
-        
+
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
         <div className="max-w-4xl w-full bg-white shadow-lg rounded-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
@@ -51,6 +52,26 @@ const MartyrProfileDetails = () => {
                 <p className="text-gray-600 mt-2 text-sm">
                   {MartyrProfileDetails["Short biography"]}
                 </p>
+              </div>
+              {/* video section  */}
+              <div className="mt-6">
+               <h3 className="text-xl font-semibold text-gray-700">
+                  Interview
+                </h3>
+                <div className="mt-2 w-full mx-auto rounded-lg overflow-hidden shadow-lg">
+                  <div className="relative pt-[56.25%]">
+                    {" "}
+                    {/* Aspect ratio container */}
+                    <ReactPlayer
+                      className="absolute top-0 left-0 w-full h-full"
+                      light={<img src='https://img.youtube.com/vi/7L2s5jLAr90/maxresdefault.jpg' alt='Thumbnail' />}
+                      url="https://youtu.be/7L2s5jLAr90?si=8XFlAOSvKPFjZUOM"
+                      width="100%"
+                      height="100%"
+                      controls={true}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

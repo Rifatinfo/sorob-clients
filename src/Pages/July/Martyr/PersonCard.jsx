@@ -18,7 +18,7 @@ const PersonCard = () => {
                     <Link to={`/projects/july-uprising/martyr/${martyr._id}`}>
                     <motion.div
                         key={martyr.id}
-                        className="relative bg-white shadow-lg rounded-2xl p-5 w-72 mx-auto overflow-hidden border border-gray-200"
+                        className="relative bg-white shadow-lg rounded-2xl p-5 w-72 h-[280px]  mx-auto overflow-hidden border border-gray-200"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                     >
@@ -37,7 +37,7 @@ const PersonCard = () => {
                         </div>
 
                         {/* Content */}
-                        <div className="text-center mt-4">
+                        <div className="text-center mt-4 flex flex-col flex-1">
                             <h2 className="text-xl font-bold text-gray-800">{martyr.name}</h2>
                             <p className="text-gray-600 text-sm">{martyr.designation}</p>
                             <p className="text-gray-500 text-sm">{martyr.institution}</p>

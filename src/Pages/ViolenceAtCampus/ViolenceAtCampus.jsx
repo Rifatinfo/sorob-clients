@@ -5,6 +5,10 @@ import Injured from '../July/Injured/Injured';
 import StatsSection from '../July/Injured/StatsSection';
 import StatsSection_2 from '../July/Injured/StatsSection_2';
 import ArchiveMain from '../ArchiveMain/ArchiveMain';
+import VideosAndPhotos from '../../Components/VideosAndPhotos/VideosAndPhotos';
+import CaseStudiesViolenceAtCampus from './caseStudiesViolenceAtCampus';
+import CampusViolenceVideoAndPhotos from './CampusViolenceVideoAndPhotos';
+import MakeADifferenceSlider from './MakeADifferenceSlider';
 const ViolenceAtCampus = () => {
     const [activeTab, setActiveTab] = useState("Martyr");
 
@@ -23,7 +27,7 @@ const ViolenceAtCampus = () => {
                     </div>
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-                        <p className="text-lg md:text-xl font-semibold">Home / Projects</p>
+                        {/* <p className="text-lg md:text-xl font-semibold">Home / Projects</p> */}
                         <h1 className="text-xl md:text-3xl font-extrabold">Violence At Campus</h1>
                     </div>
                 </div>
@@ -63,7 +67,10 @@ const ViolenceAtCampus = () => {
             </div>
 
             {/* case studies */}
-            <ArchiveMain/>
+            {/* <ArchiveMain/> */}
+            <CaseStudiesViolenceAtCampus/>
+            <CampusViolenceVideoAndPhotos/>
+            <MakeADifferenceSlider/>
         </div>
     );
 };
